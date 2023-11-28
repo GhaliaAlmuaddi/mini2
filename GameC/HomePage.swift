@@ -65,8 +65,8 @@ struct HomePage: View {
                             
                         }
                         
-                        .padding(.bottom, -15)
-                        .padding(.trailing,-10)
+                        .padding(.bottom, 0)
+                        .padding(.trailing,5)
                         ZStack{
                             RoundedRectangle(cornerRadius: 13)
                             
@@ -79,29 +79,29 @@ struct HomePage: View {
                             VStack{
                                 
                                 
-                                        Text("بنضم الى لعبة")
-                                            .foregroundColor(Color.white)
-                                            .multilineTextAlignment(.trailing)
-                                            .font(.system(size: 35))
-                                        
-                                            .offset(x: 30, y: 40)
-                                        //.rotationEffect(.degrees(5))
-                                        Image("ninja_with_stick")
-                                            .resizable()
-                                            .frame(width:200, height: 240
-                                            )
-                                            .offset(x: -50.0, y: 60)
-                                        // .rotationEffect(.degrees(5))
-                                        
-                                        
-                                        
-                                    }
+                                Text("بنضم الى لعبة")
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.trailing)
+                                    .font(.system(size: 35))
+                                
+                                    .offset(x: 30, y: 40)
+                                //.rotationEffect(.degrees(5))
+                                Image("ninja_with_stick")
+                                    .resizable()
+                                    .frame(width:200, height: 240
+                                    )
+                                    .offset(x: -50.0, y: 60)
+                                // .rotationEffect(.degrees(5))
+                                
+                                
                                 
                             }
-                            .padding([.trailing], -10)
                             
                         }
+                        .padding([.trailing], 2)
                         
+                    }
+                    
                     Button {
                         isActive = true
                     } label: {
@@ -111,44 +111,44 @@ struct HomePage: View {
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading)
                                 )
-                     
-                        VStack{
-                            Text("يلا نلعب!")
-                                .foregroundColor(Color.white)
-                                .multilineTextAlignment(.trailing)
-                                .font(.system(size: 52))
-                                .offset(x: 10, y: 105)
                             
-                            
-                            Image("NINJA_SMILE")
-                                .resizable()
-                                .frame(width:270, height: 340
-                                )
-                                .offset(x: 10.0, y: 200)
-                            // .rotationEffect(.degrees(5))
-                            
-                        }
+                            VStack{
+                                Text("يلا نلعب!")
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.trailing)
+                                    .font(.system(size: 52))
+                                    .offset(x: 10, y: 105)
+                                
+                                
+                                Image("NINJA_SMILE")
+                                    .resizable()
+                                    .frame(width:270, height: 340
+                                    )
+                                    .offset(x: 10.0, y: 200)
+                                // .rotationEffect(.degrees(5))
+                                
+                            }  .padding(.bottom, -10.0)
                         }.ignoresSafeArea()
                     }
                 }.ignoresSafeArea()
-
-                        if isActive {
-//                       Color(.black)
-//                            // .blur(radius:500)
-//                                .opacity(0.8).ignoresSafeArea()
-                            CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
-                               // print("Pass to viewModel")
-                            }
-                        }
-                        
-                   
-            }
+                
+                if isActive {
+                    //                       Color(.black)
+                    //                            // .blur(radius:500)
+                    //                                .opacity(0.8).ignoresSafeArea()
+                    CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
+                        // print("Pass to viewModel")
+                    }
+                }
+                
+                
+            }}
             .padding(.bottom, -10.0)
                         
                         
                         
                         
-                    }
+                    
                     
                     
                     
