@@ -50,7 +50,7 @@ struct Desc2: View {
                         
                         .frame(width: 200, height:50)
                         .padding(.top)
-                        .padding(.trailing, 250)
+                        .padding(.trailing, 270)
                                   
                     Text(" وعندنا لوحة التشفير:")
 

@@ -18,7 +18,7 @@ struct GameDescription: View {
             Desc3()
  }
         //.tabViewStyle(PageTabViewStyle())
-       //.tabViewStyle(.page)
+      .tabViewStyle(.page)
         .ignoresSafeArea()
         }
        
