@@ -16,7 +16,9 @@ struct GameDescription: View {
             Desc1()
             Desc2()
             Desc3()
- }
+ } .ignoresSafeArea()
+        .toolbarBackground(.hidden, for: .navigationBar)
+      
         //.tabViewStyle(PageTabViewStyle())
       .tabViewStyle(.page)
         .ignoresSafeArea()

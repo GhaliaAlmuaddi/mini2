@@ -29,6 +29,9 @@ struct HomePage: View {
                 HStack{
                     
                     VStack{
+                        NavigationLink{ GameDescription()
+                        }
+                    label:{
                         ZStack{
                             
                             RoundedRectangle(cornerRadius: 13)
@@ -67,6 +70,8 @@ struct HomePage: View {
                         
                         .padding(.bottom, 0)
                         .padding(.trailing,5)
+                    }
+                  
                         ZStack{
                             RoundedRectangle(cornerRadius: 13)
                             
@@ -143,10 +148,11 @@ struct HomePage: View {
                 
                 
             }}
+
             .padding(.bottom, -10.0)
                         
                         
-                        
+          
                         
                     
                     
