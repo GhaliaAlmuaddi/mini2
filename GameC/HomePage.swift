@@ -30,6 +30,7 @@ struct HomePage: View {
                     
                     VStack{
                         NavigationLink{ GameDescription()
+                        
                         }
                     label:{
                         ZStack{
@@ -109,7 +110,7 @@ struct HomePage: View {
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 13)
-                                .frame(width: 330, height: 830)
+                                .frame(width: 330, height: 843)
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading)
                                 )
