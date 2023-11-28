@@ -35,10 +35,7 @@ struct HomePage: View {
                         ZStack{
                             
                             RoundedRectangle(cornerRadius: 13)
-                                .onTapGesture {
-                                    //  GameDescription()
-                                    
-                                }
+                              
                                 .padding()
                             // .rotationEffect(.degrees(5))
                             
