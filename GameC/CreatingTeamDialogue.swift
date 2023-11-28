@@ -20,10 +20,7 @@ import SwiftUI
         @State private var offset: CGFloat = 3000
         
         var objectCripto : [String]=["a","b","c","E","F","G","H","I","J","K"]
-        
-        
-        
-        
+ 
         var body: some View {
           
             
@@ -40,14 +37,15 @@ import SwiftUI
             
             ZStack {
                 Color(.black)
-                    .blur(radius:100)
-                    .opacity(0.2)
+                    .opacity(0.70)
+                .blur(radius:20)
+            .ignoresSafeArea()
                     .onTapGesture {
                         close()
                     }
                     Rectangle()
-                    .fill(.white.opacity(0.09)).frame(width: 470, height:450).cornerRadius(13)
-                    //.blur(radius:40)
+                    .fill(.white.opacity(0.6)).frame(width: 470, height:450).cornerRadius(13)
+                    .blur(radius:0.5)
                 
 //               Rectangle()
 //                    .frame(width: 470, height:450 , alignment: .center)
@@ -68,13 +66,16 @@ import SwiftUI
                         .padding(30)
 
                    // VStack {
-                    
-                    TextField("اسم الفريق الاول", text: $team1Name).frame(width:352.53,height: 83).overlay(
+                    TextField("", text: $team1Name, prompt: Text("اسم الفريق الاول")
+                        .foregroundColor(.white)
+                            ).frame(width:352.53,height: 83).overlay(
                         RoundedRectangle(cornerRadius: 13)
                             .stroke(Color.white, lineWidth: 2)
                     )
                         .multilineTextAlignment(.center)
-                    TextField("اسم الفريق الثاني", text: $team2Name).frame(width:352.53,height: 83).overlay(
+                    TextField("", text: $team2Name, prompt: Text("اسم الفريق الثاني")
+                        .foregroundColor(.white)
+                            ).frame(width:352.53,height: 83).overlay(
                         RoundedRectangle(cornerRadius: 13)
                             .stroke(Color.white, lineWidth: 2)
                     )
@@ -121,18 +122,18 @@ import SwiftUI
                             .fontWeight(.medium)
                             .foregroundColor(.white)
                     }
-                    .tint(.black)
+                    //.tint(.black)
                     .padding()
                 }
                 .shadow(radius: 20)
                 .padding(30)
-                .offset(x: 0, y: offset)
-                .onAppear {
-                    withAnimation(.spring()) {
-                        offset = 0
-                    }
-                }
-            }.ignoresSafeArea()
+               // .offset(x: 0, y: offset)
+//                .onAppear {
+//                    withAnimation(.spring()) {
+//                        offset = 0
+//                    }
+              //  }
+            }.ignoresSafeArea().padding(-40) //here
         }
         
 //        func Array_shaffle (array1:[String])-> [String] {
@@ -161,6 +162,13 @@ import SwiftUI
             }
         }
     }
+
+struct CustomColor{
+    static let CustomDpurple = Color("CustomDpurple")
+    static let CustomDyellow = Color("CustomDyellow")
+    static let CustomLpurple = Color("CustomLpurple")
+   static let CustomLyellow = Color("CustomLyellow")
+}
 
     struct CustomDialog_Previews: PreviewProvider {
         static var previews: some View {
