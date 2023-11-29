@@ -24,16 +24,6 @@ import SwiftUI
         var body: some View {
           
             
-           //var objectCripto_shaffle = Array_shaffle(array1: objectCripto)
-            
-//           ForEach(objectCripto,id: \.self){ element in
-//            Text("\(element)")
-//          }
-//            var indx=3
-//            var res = Array_shaffle2(array1: objectCripto,indexP: indx)
-//            Text("\(res)").background(.black)
-            
-          //  print("Pass to viewModel")
             
             ZStack {
                 Color(.black)
@@ -47,18 +37,7 @@ import SwiftUI
                     .fill(.white.opacity(0.6)).frame(width: 470, height:450).cornerRadius(13)
                     .blur(radius:0.5)
                 
-//               Rectangle()
-//                    .frame(width: 470, height:450 , alignment: .center)
-//                    //.cornerRadius(20)
-//                  .background(.white)
-//                    .opacity(0.2).blur(radius:40)
-//       
-//                 .overlay {
-//                
-//                     LinearGradient(colors: [.clear, .white.opacity(0.05)], startPoint: .top, endPoint: .bottom)
-//               }
-            //shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
-              // shadow(color: .white, radius: 5, x: 0, y: -2)
+
                 VStack {
                     Text(title)
                         .font(.title2)
@@ -89,10 +68,7 @@ import SwiftUI
                     } label: {
                         ZStack {
                            
-//                            AngularGradient(
-//                                gradient: Gradient(colors: [ CustomColor.CustomDpurple,CustomColor.CustomLpurple]), center: .topLeading,
-//                                startAngle: .zero,
-//                                endAngle: .degrees(100)
+
                                 
                             
                             LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 286, height:71).cornerRadius(41)
@@ -108,11 +84,8 @@ import SwiftUI
                     }
                 }.cornerRadius(20)
            
-                //.fixedSize(horizontal: false, vertical: true)
-                .padding(30)//.frame(width: 470, height:508 , alignment: .center)
-                
-                //.background(.clear).opacity(10).cornerRadius(20)
-//                .clipShape(RoundedRectangle(cornerRadius: 20)).background()
+               
+                .padding(30)
                 .overlay(alignment: .trailingFirstTextBaseline) {
                     Button {
                         close()
@@ -127,33 +100,11 @@ import SwiftUI
                 }
                 .shadow(radius: 20)
                 .padding(30)
-               // .offset(x: 0, y: offset)
-//                .onAppear {
-//                    withAnimation(.spring()) {
-//                        offset = 0
-//                    }
-              //  }
+              
             }.ignoresSafeArea().padding(-40) //here
         }
         
-//        func Array_shaffle (array1:[String])-> [String] {
-//          var array1=array1.shuffled()
-//            return array1
-//        }
-//        
-//        func Array_shaffle2 (array1:[String], indexP : Int)-> String {
-//          var array1=array1.shuffled()
-//           var index2=0
-//            var value = ""
-//            for i in array1 {
-//                if(index2 == indexP){
-//                var value = i
-//                    break
-//                }
-//                index2=index2+1
-//            }
-//return value
-//        }
+
 
         func close() {
             withAnimation(.spring()) {

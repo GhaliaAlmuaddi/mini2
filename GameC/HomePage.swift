@@ -17,6 +17,7 @@ import SwiftUI
 
 struct HomePage: View {
     @State var isActive: Bool = false
+    @State var isActive2: Bool = false
     var body: some View {
         
         NavigationStack{
@@ -64,46 +65,56 @@ struct HomePage: View {
                                 
                             }
                             
+                           
+                            
                         }
                         
                         .padding(.bottom, 0)
                         .padding(.trailing,5)
                     }
-                        
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 13)
-                            
-                            //.rotationEffect(.degrees(5))
-                                .frame(width: 300, height:420)
-                            
-                                .foregroundStyle(
-                                    LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
-                            
-                            VStack{
+                        Button {
+                            isActive2 = true
+                        } label: {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 13)
                                 
-                                
-                                Text("بنضم الى لعبة")
-                                    .foregroundColor(Color.white)
-                                    .multilineTextAlignment(.trailing)
-                                    .font(.system(size: 35))
-                                
-                                    .offset(x: 30, y: 40)
                                 //.rotationEffect(.degrees(5))
-                                Image("ninja_with_stick")
-                                    .resizable()
-                                    .frame(width:200, height: 240
-                                    )
-                                    .offset(x: -50.0, y: 60)
-                                // .rotationEffect(.degrees(5))
+                                    .frame(width: 300, height:420)
+                                
+                                    .foregroundStyle(
+                                        LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
                                 
                                 
+                                VStack{
+                                    
+                                    
+                                    Text("بنضم الى لعبة")
+                                        .foregroundColor(Color.white)
+                                        .multilineTextAlignment(.trailing)
+                                        .font(.system(size: 35))
+                                    
+                                        .offset(x: 30, y: 40)
+                                    //.rotationEffect(.degrees(5))
+                                    Image("ninja_with_stick")
+                                        .resizable()
+                                        .frame(width:200, height: 240
+                                        )
+                                        .offset(x: -50.0, y: 60)
+                                    // .rotationEffect(.degrees(5))
+                                    
+                                    
+                                    
+                                }
                                 
-                            }
+                            } //here
+                           .padding([.trailing], 2)
                             
+                          
                         }
-                        .padding([.trailing], 2)
-                        
                     }
+                  
+                  
+                    
                     
                     Button {
                         isActive = true
@@ -136,10 +147,13 @@ struct HomePage: View {
                 }.ignoresSafeArea()
                 
                 if isActive {
-                    //                       Color(.black)
-                    //                            // .blur(radius:500)
-                    //                                .opacity(0.8).ignoresSafeArea()
                     CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
+                        // print("Pass to viewModel")
+                    }
+                }
+                
+                if isActive2 {
+                    JoiningTeamDialogue(isActive: $isActive2, title: "بنضم الى لعبة", buttonTitle: "انضمام") {
                         // print("Pass to viewModel")
                     }
                 }
