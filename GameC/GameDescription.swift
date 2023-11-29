@@ -17,11 +17,32 @@ struct GameDescription: View {
             Desc2()
             Desc3()
  } .ignoresSafeArea()
-        .toolbarBackground(.hidden, for: .navigationBar)
-      
+        //.toolbarBackground(.hidden, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            
+            // 2
+            ToolbarItem(placement: .navigationBarTrailing) {
+                
+                NavigationLink {
+                    // 3
+                HomePage()
+                    
+                } label: {
+                    // 4
+                   
+                        
+                        Image(systemName: "xmark")
+                        .resizable().font(.largeTitle)
+                        .foregroundColor(.white)
+                        
+                    
+                }
+             
+            }}
         //.tabViewStyle(PageTabViewStyle())
       .tabViewStyle(.page)
-        .ignoresSafeArea()
+      
         }
        
     }

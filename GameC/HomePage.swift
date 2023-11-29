@@ -30,13 +30,13 @@ struct HomePage: View {
                     
                     VStack{
                         NavigationLink{ GameDescription()
-                        
+                            
                         }
                     label:{
                         ZStack{
                             
                             RoundedRectangle(cornerRadius: 13)
-                              
+                            
                                 .padding()
                             // .rotationEffect(.degrees(5))
                             
@@ -69,7 +69,7 @@ struct HomePage: View {
                         .padding(.bottom, 0)
                         .padding(.trailing,5)
                     }
-                  
+                        
                         ZStack{
                             RoundedRectangle(cornerRadius: 13)
                             
@@ -146,17 +146,19 @@ struct HomePage: View {
                 
                 
             }}
-
-            .padding(.bottom, -10.0)
-                        
-                        
-          
-                        
-                    
-                    
-                    
-                    
-                }}
+        .navigationBarBackButtonHidden(true)
+        //.accentColor(.red)
+        .padding(.bottom, -10.0)
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+}
         
     
     struct CustomColor2{
