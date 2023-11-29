@@ -48,7 +48,7 @@ struct Desc2: View {
                     Image("GameDescription")
                         .resizable()
                         
-                        .frame(width: 200, height:50)
+                        .frame(width: 200, height:40)
                         .padding(.top)
                         .padding(.trailing, 270)
                                   

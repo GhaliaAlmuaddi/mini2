@@ -40,6 +40,7 @@ struct GameDescription: View {
                 }
              
             }}
+        .toolbarBackground(.hidden, for: .navigationBar)
         //.tabViewStyle(PageTabViewStyle())
       .tabViewStyle(.page)
       
