@@ -10,6 +10,7 @@ import SwiftUI
 struct GameRoom: View {
     @State private var showingAlert = false
     @State private var showCode = false
+    @State private var showGotPoint = false
     @State private var CounterTeamOne = 0
     @State private var CounterTeamTwo = 0
     @State private var presnt : CGFloat = 003
@@ -226,8 +227,7 @@ struct GameRoom: View {
                         if CounterTeamOne + 10 <= 100 {
                             CounterTeamOne += 10
                         }
-                        
-
+                        showGotPoint=true
 
                     } label: {
                         ZStack{
@@ -235,20 +235,14 @@ struct GameRoom: View {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLyellow,CustomColor.CustomDyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 200, height: 220) .cornerRadius(13)
-//                                .onTapGesture {
-//
-//                                    if CounterTeamOne + 10 <= 100 {
-//                                        CounterTeamOne += 10
-//                                    }
-//
-//                                }
+                            
                             VStack{
                                 Text("\(team1Name)")
                                     .foregroundColor(.white)
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.trailing)
-                                Image("ninja_with_stick")
+                                Image("Ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
                                     .offset(y:15)
@@ -256,6 +250,9 @@ struct GameRoom: View {
                             }
                         }
                     }
+                    .alert("كفو والله!!", isPresented: $showGotPoint) {
+                                        Button("كمل 💪",role: .cancel) { }
+                                     }
                     Spacer()
                     
                     Button {
@@ -266,7 +263,8 @@ struct GameRoom: View {
                             
                         }
                         
-                        
+                        showGotPoint=true
+
                     }
                 
                     
@@ -292,6 +290,9 @@ struct GameRoom: View {
                             }
                      
                 }   }
+                .alert("كفو والله!!", isPresented: $showGotPoint) {
+                                    Button("كمل 💪",role: .cancel) { }
+                                 }
                     
                     
                     
