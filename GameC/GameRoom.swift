@@ -13,6 +13,10 @@ struct GameRoom: View {
     @State private var CounterTeamOne = 0
     @State private var CounterTeamTwo = 0
     @State private var presnt : CGFloat = 003
+    
+    @Binding var team1Name : String
+    @Binding var team2Name : String
+    
     //ARRAY FOR THE GRID
     let clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
     // Data model for the code grids
@@ -94,7 +98,7 @@ struct GameRoom: View {
           
                 HStack{
                     VStack(alignment:.trailing){
-                        Text("الفريق الأول")
+                        Text("\(team1Name)")
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.trailing)
@@ -147,7 +151,7 @@ struct GameRoom: View {
                     
                     Spacer()
                     VStack(alignment:.trailing){
-                        Text("الفريق الثاني")
+                        Text(("\(team2Name)"))
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.trailing)
@@ -239,12 +243,12 @@ struct GameRoom: View {
 //
 //                                }
                             VStack{
-                                Text("الفريق الأول")
+                                Text("\(team1Name)")
                                     .foregroundColor(.white)
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.trailing)
-                                Image("Ninja_with_stick")
+                                Image("ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
                                     .offset(y:15)
@@ -270,7 +274,7 @@ struct GameRoom: View {
                                 .cornerRadius(13)
 //
                             VStack{
-                                Text("الفريق الثاني")
+                                Text("\(team2Name)")
                                     .foregroundColor(.white)
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
@@ -305,6 +309,26 @@ struct GameRoom: View {
       
     }    }
 
+func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String? {
+    
+    while true {
+       Array1 = Array1.shuffled()
+        
+        for i in Array1 {
+            if !UniqueSet1.contains(i) {
+                UniqueSet1.insert(i)
+                return i
+            }
+        }
+        
+        UniqueSet1.removeAll()
+        
+    }
+    
+    
+}
+
+
 struct KeyValueItem: Identifiable {
     let id: UUID
     let key: Int
@@ -313,5 +337,5 @@ struct KeyValueItem: Identifiable {
 
 
 #Preview {
-    GameRoom()
+    GameRoom(team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
 }

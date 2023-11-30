@@ -106,24 +106,24 @@ struct ContentView: View {
 //return value
 //       }
 
-func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String? {
-    
-    while true {
-       Array1 = Array1.shuffled()
-        
-        for i in Array1 {
-            if !UniqueSet1.contains(i) {
-                UniqueSet1.insert(i)
-                return i
-            }
-        }
-        
-        UniqueSet1.removeAll()
-        
-    }
-    
-    
-}
+//func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String? {
+//    
+//    while true {
+//       Array1 = Array1.shuffled()
+//        
+//        for i in Array1 {
+//            if !UniqueSet1.contains(i) {
+//                UniqueSet1.insert(i)
+//                return i
+//            }
+//        }
+//        
+//        UniqueSet1.removeAll()
+//        
+//    }
+//    
+//    
+//}
 
 
 

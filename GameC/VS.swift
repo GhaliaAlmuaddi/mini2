@@ -2,6 +2,8 @@ import SwiftUI
 
 
 struct VS: View {
+    @Binding var team1Name : String
+    @Binding var team2Name : String
     
     var body: some View {
         NavigationStack{
@@ -13,8 +15,7 @@ struct VS: View {
                     endAngle: .degrees(100)
                     
                 )
-                
-                
+
                 VStack{
                     HStack{
                         ZStack{
@@ -29,7 +30,7 @@ struct VS: View {
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
                                 .padding(.trailing, -100)
                             
-                            Text("الفريق الاول")
+                            Text("\(team1Name)")
                                 .foregroundColor(Color.white)
                                 .multilineTextAlignment(.trailing)
                                 .font(.system(size: 35))
@@ -57,7 +58,7 @@ struct VS: View {
                                     LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
                                 .padding(.leading, -100)
                             
-                            Text("الفريق الثاني")
+                            Text("\(team2Name)")
                                 .foregroundColor(Color.white)
                                 .multilineTextAlignment(.trailing)
                                 .font(.system(size: 35))
@@ -80,8 +81,7 @@ struct VS: View {
                         //  .fontWeight(.medium)
                         //  .offset( x:-340,y:-350)
                         
-                        NavigationLink{ GameRoom()}
-                        
+                        NavigationLink{ GameRoom(team1Name: $team1Name, team2Name: $team2Name)}
                         
                     label: {
                         ZStack {
@@ -96,7 +96,8 @@ struct VS: View {
                         }
                     }
                         
-                    NavigationLink{ GameRoom()}
+                    NavigationLink{ GameRoom(team1Name: $team1Name, team2Name: $team2Name)}
+
                     
                     
                 label: {
@@ -158,6 +159,7 @@ struct VS: View {
 
                    
 
-#Preview {
- VS()
-}
+    #Preview {
+            VS(team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
+        }
+

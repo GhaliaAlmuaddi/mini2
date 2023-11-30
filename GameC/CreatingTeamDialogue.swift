@@ -13,11 +13,12 @@ import SwiftUI
 
         let title: String
         //let message: String
-        @State private var team1Name = ""
-        @State private var team2Name = ""
+        @State var team1Name = ""
+        @State var team2Name = ""
         let buttonTitle: String
         let action: () -> ()
         @State private var offset: CGFloat = 3000
+        
         
         var objectCripto : [String]=["a","b","c","E","F","G","H","I","J","K"]
  
@@ -62,9 +63,10 @@ import SwiftUI
                         //   }
                         .font(.body)
 
-                    Button {
-                        action()
-                        close()
+                    NavigationLink{
+                    //action()
+                      VS(team1Name: $team1Name, team2Name: $team2Name)
+                                            
                     } label: {
                         ZStack {
                            

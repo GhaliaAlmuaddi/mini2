@@ -10,6 +10,7 @@ import SwiftUI
 struct Winner: View {
       @State private var isButtonTapped = false
       let results = ["عشاء الفريق الفايز اليوم عليكم", "قهوة الفريق الفايز عليكم"].shuffled()
+    
     var body: some View {
           
                 ZStack{
