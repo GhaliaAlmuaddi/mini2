@@ -102,16 +102,16 @@ struct VS: View {
                     
                 label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 41)
+                       // RoundedRectangle(cornerRadius: 41)
                            // .stroke(.blue, lineWidth: 4)
-                       
-                     
-                       .frame(width: 320, height:30)
-                       .padding()
-                       .foregroundColor(Color.white.opacity(0.0))
+                       //.padding()
+                       //.foregroundColor(Color.white.opacity(0.0))
                       
-                       .border(Color.customDyellow, width: 4)
-                       .cornerRadius(41)
+                      // .border(Color.customDyellow, width: 4)
+                       //.cornerRadius(41)
+                        RoundedRectangle(cornerRadius: 41)
+                            .stroke(Color.customLyellow, lineWidth: 2)
+                            .frame(width: 320, height:60)
                         
                         Text("مشاركة كود الانضمام")
                             .font(.system(size: 25, weight: .bold))

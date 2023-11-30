@@ -289,7 +289,7 @@ struct GameRoom: View {
                 }.padding(30)
                 //HSTACK FOR THE BTN COUNTER END ...
                 
-               
+                    .navigationBarBackButtonHidden(true)
                 
                 
                 
