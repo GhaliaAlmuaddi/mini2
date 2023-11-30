@@ -223,8 +223,8 @@ struct GameRoom: View {
                     
                     
                     Button {
-                        if CounterTeamTwo + 10 <= 100 {
-                            CounterTeamTwo += 10
+                        if CounterTeamOne + 10 <= 100 {
+                            CounterTeamOne += 10
                         }
                         
 
