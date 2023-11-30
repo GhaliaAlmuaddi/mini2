@@ -260,12 +260,18 @@ struct GameRoom: View {
                     
                     Button {
                         if CounterTeamTwo + 10 <= 100 {
+                            
                             CounterTeamTwo += 10
+                           
+                            
                         }
                         
-
-
-                    } label: {
+                        
+                    }
+                
+                    
+                
+                label: {
                         
                         ZStack{
                             Rectangle()
@@ -286,6 +292,10 @@ struct GameRoom: View {
                             }
                      
                 }   }
+                    
+                    
+                    
+                    
                 }.padding(30)
                 //HSTACK FOR THE BTN COUNTER END ...
                 
