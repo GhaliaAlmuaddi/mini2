@@ -13,6 +13,7 @@
 		29570B452B15D55D00DFCF2E /* Desc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B442B15D55D00DFCF2E /* Desc1.swift */; };
 		29570B472B15D56E00DFCF2E /* Desc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B462B15D56E00DFCF2E /* Desc2.swift */; };
 		29570B492B15D57F00DFCF2E /* Desc3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B482B15D57F00DFCF2E /* Desc3.swift */; };
+		3A7840E42B1874D000A1CCCC /* VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7840E32B1874D000A1CCCC /* VS.swift */; };
 		903E652B2B14F745000ED931 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E652A2B14F745000ED931 /* HomePage.swift */; };
 		90DA0A532B10DBE700C97E85 /* GameCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA0A522B10DBE700C97E85 /* GameCApp.swift */; };
 		90DA0A552B10DBE700C97E85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA0A542B10DBE700C97E85 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		29570B442B15D55D00DFCF2E /* Desc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc1.swift; sourceTree = "<group>"; };
 		29570B462B15D56E00DFCF2E /* Desc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc2.swift; sourceTree = "<group>"; };
 		29570B482B15D57F00DFCF2E /* Desc3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc3.swift; sourceTree = "<group>"; };
+		3A7840E32B1874D000A1CCCC /* VS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VS.swift; sourceTree = "<group>"; };
 		903E652A2B14F745000ED931 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		90DA0A4F2B10DBE700C97E85 /* GameC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DA0A522B10DBE700C97E85 /* GameCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCApp.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				29570B462B15D56E00DFCF2E /* Desc2.swift */,
 				223975BB2B15CDA9009D9275 /* GameRoom.swift */,
 				903E652A2B14F745000ED931 /* HomePage.swift */,
+				3A7840E32B1874D000A1CCCC /* VS.swift */,
 				04C1E56A2B171D3700DDF277 /* Winner.swift */,
 				29570B482B15D57F00DFCF2E /* Desc3.swift */,
 				90EA71452B17CDE90009DE99 /* JoiningTeamDialogue.swift */,
@@ -172,6 +175,7 @@
 				29570B492B15D57F00DFCF2E /* Desc3.swift in Sources */,
 				90DA0A552B10DBE700C97E85 /* ContentView.swift in Sources */,
 				90DA0A532B10DBE700C97E85 /* GameCApp.swift in Sources */,
+				3A7840E42B1874D000A1CCCC /* VS.swift in Sources */,
 				90EA71462B17CDE90009DE99 /* JoiningTeamDialogue.swift in Sources */,
 				903E652B2B14F745000ED931 /* HomePage.swift in Sources */,
 				29570B472B15D56E00DFCF2E /* Desc2.swift in Sources */,
