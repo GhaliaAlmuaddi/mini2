@@ -114,7 +114,7 @@ struct VS: View {
                             .frame(width: 320, height:60)
                         
                         Text("مشاركة كود الانضمام")
-                            .font(.system(size: 25, weight: .bold))
+                            .font(.system(size: 22, weight: .bold))
                             .foregroundColor(.white)
                          
                     }
