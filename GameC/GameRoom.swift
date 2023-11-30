@@ -82,6 +82,7 @@ struct GameRoom: View {
                               Button("نسخ",role: .cancel) { }
                           } message: {
                               Text("CBC1414")
+                              
                           }
                           .foregroundColor(CustomColor.CustomDyellow)
                           .font(.system(size: 24))
@@ -116,22 +117,33 @@ struct GameRoom: View {
                                     endPoint: .trailing))
                                 .frame(width:pct1, height: 18)
                         }
+                     
+                            //.padding(.top)
                     }.foregroundColor(.white)
                     Spacer()
-        //THE SERIAL NUMBER FOR THE CODE
+      
+                    VStack{
+                        Text("سارع بفك الشفرة وتنفيذ الطلب")
+                                     .foregroundColor(.white)
+                                     .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
+                                     .fontWeight(.regular)
+                                     .multilineTextAlignment(.trailing)
+                        ZStack{
+                        //THE SERIAL NUMBER FOR THE CODE
+                       Text("7,28,4")
+                                .foregroundColor(.white)
+                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.semibold)
+                                //.multilineTextAlignment(.trailing)
+                                //.font(.system(family: "Helvetica"))
+                            Capsule()
+                                .fill(.white.opacity(0.08))
+                                .frame(width: 290,height: 60)
+                        }
 
-                    ZStack{
-                        Text("7,28,4")
-                            .foregroundColor(.white)
-                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.trailing)
-                            //.font(.system(family: "Helvetica"))
-                        Capsule()
-                            .fill(.white.opacity(0.08))
-                            .frame(width: 290,height: 60)
                     }
-                 
+               
+                    
                     
                     Spacer()
                     VStack(alignment:.trailing){
@@ -204,59 +216,72 @@ struct GameRoom: View {
                 
                 //HSTACK FOR THE BTN COUNTER START ...
                 HStack{
-                
                     
+                    
+                    Button {
+                        if CounterTeamTwo + 10 <= 100 {
+                            CounterTeamTwo += 10
+                        }
+                        
+
+
+                    } label: {
+                        ZStack{
+                            
+                            Rectangle()
+                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLyellow,CustomColor.CustomDyellow]), startPoint: .top, endPoint: .bottom))
+                                .frame(width: 200, height: 220) .cornerRadius(13)
+//                                .onTapGesture {
+//
+//                                    if CounterTeamOne + 10 <= 100 {
+//                                        CounterTeamOne += 10
+//                                    }
+//
+//                                }
+                            VStack{
+                                Text("الفريق الأول")
+                                    .foregroundColor(.white)
+                                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.trailing)
+                                Image("Ninja_with_stick")
+                                    .resizable()
+                                    .frame(width: 150,height: 150)
+                                    .offset(y:15)
+                                
+                            }
+                        }
+                    }
+                    Spacer()
+                    
+                    Button {
+                        if CounterTeamTwo + 10 <= 100 {
+                            CounterTeamTwo += 10
+                        }
+                        
+
+
+                    } label: {
                         
                         ZStack{
                             Rectangle()
-                            .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLyellow,CustomColor.CustomDyellow]), startPoint: .top, endPoint: .bottom))
-                            .frame(width: 200, height: 220) .cornerRadius(13)
-                            .onTapGesture {
-                                
-                                if CounterTeamOne + 10 <= 100 {
-                                        CounterTeamOne += 10
-                                    }
-
-                                       }
+                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLpurple,CustomColor.CustomDpurple]), startPoint: .top, endPoint: .bottom))
+                                .frame(width: 200, height: 220)
+                                .cornerRadius(13)
+//
                             VStack{
-                                Text("الفريق الأول")
-                                .foregroundColor(.white)
-                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.trailing)
-                                Image("ninja_with_stick")
+                                Text("الفريق الثاني")
+                                    .foregroundColor(.white)
+                                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.trailing)
+                                Image("NINJA_SMILE")
                                     .resizable()
-                                     .frame(width: 150,height: 150)
-                                     .offset(y:15)
-                                    
+                                    .frame(width: 145,height: 145)
+                                    .offset(y:15)
                             }
-                        }
-                    Spacer()
-
-                    
-                    ZStack{
-                        Rectangle()
-                        .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLpurple,CustomColor.CustomDpurple]), startPoint: .top, endPoint: .bottom))
-                        .frame(width: 200, height: 220)
-                        .cornerRadius(13)
-                        .onTapGesture {
-                            if CounterTeamTwo + 10 <= 100 {
-                                CounterTeamTwo += 10
-                                }
-                            
-                                   }
-                        VStack{
-                            Text("الفريق الثاني")
-                                .foregroundColor(.white)
-                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.trailing)
-                            Image("NINJA_SMILE")
-                                .resizable()
-                                .frame(width: 145,height: 145)
-                                .offset(y:15)
-                        }
-                    }
+                     
+                }   }
                 }.padding(30)
                 //HSTACK FOR THE BTN COUNTER END ...
                 
