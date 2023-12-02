@@ -81,7 +81,7 @@ struct VS: View {
                         //  .fontWeight(.medium)
                         //  .offset( x:-340,y:-350)
                         
-                        NavigationLink{ GameRoom(team1Name: $team1Name, team2Name: $team2Name)}
+                    NavigationLink{ GameRoom(team1Name: $team1Name, team2Name: $team2Name)}
                         
                     label: {
                         ZStack {

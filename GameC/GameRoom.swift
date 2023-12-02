@@ -15,13 +15,64 @@ struct GameRoom: View {
     @State private var CounterTeamTwo = 0
     @State private var presnt : CGFloat = 003
     
+    @State private var navigationActive: Bool = false
+    
+    @State var lightweightObjects: [String] = [
+        "كتاب",
+        "لمبة",
+        "ستارة",
+        "ساعة حائط",
+        "مصباح",
+        "صحن",
+        "مشغل موسيقى",
+        "فنجان قهوة",
+        "ملعقة",
+        "شمعة",
+        "مزهرية",
+        "إطار صورة",
+        "قلم رصاص",
+        "كرة تنس",
+        "سلة نفايات",
+        "مرآة صغيرة",
+        "منديل ورقي",
+        "حلق",
+        "كرة الشاطئ",
+        "مظلة صغيرة",
+        "محفظة",
+        "ساعة معصم",
+        "أقلام ملونة",
+        "كاميرا فورية",
+        "مشط",
+        "صابون صغير",
+        "كرسي مطوي",
+        "مفكرة",
+        "قميص خفيف",
+        "هاتف جوال",
+        "حقيبة صغيرة",
+        "مفاتيح السيارة",
+        "نظارات شمسية",
+        "كرة طائرة",
+        "سماعات أذن",
+        "قنينة ماء",
+        "لوحة فنية صغيرة",
+        "قطعة أثاث من البامبو",
+        "ورق تغليف هدايا",
+        "سجادة صغيرة",
+        "شمسية محمولة",
+        "حقيبة ظهر صغيرة",
+        "كرة تنس الطاولة",
+        "نبات داخلي صغير",
+    ]
+    @State var UniqueSet  = Set <String> ()
+    
+    
     @Binding var team1Name : String
     @Binding var team2Name : String
     
     //ARRAY FOR THE GRID
     let clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
     // Data model for the code grids
-    let keyValueItems = [
+    @State var keyValueItems = [
         KeyValueItem(id: UUID(), key: 10, value: "ض"),
         KeyValueItem(id: UUID(), key: 8, value: "ط"),
         KeyValueItem(id: UUID(), key: 16, value: "ظ"),
@@ -51,52 +102,55 @@ struct GameRoom: View {
         KeyValueItem(id: UUID(), key: 3, value: "ش"),
         KeyValueItem(id: UUID(), key: 15, value: "ص"),
         
-    ]
-
+    ].shuffled()
+    
     var body: some View {
+        
+        //  var Current_Q : String
+        
         ZStack {
-        //BACKGROUND START...
-        AngularGradient(
-            gradient: Gradient(colors: [ CustomColor.CustomDpurple,CustomColor.CustomLpurple]), center: .topLeading,
-            startAngle: .zero,
-            endAngle: .degrees(100)
-            
-        )
-        .ignoresSafeArea()
-        //BACKGROUND END...
+            //BACKGROUND START...
+            AngularGradient(
+                gradient: Gradient(colors: [ CustomColor.CustomDpurple,CustomColor.CustomLpurple]), center: .topLeading,
+                startAngle: .zero,
+                endAngle: .degrees(100)
+                
+            )
+            .ignoresSafeArea()
+            //BACKGROUND END...
             VStack{
                 HStack{
                     Button("إنهاء") {
-                              showingAlert = true
-                          }
-                          .alert("هل تريد إنهاء اللعبة؟", isPresented: $showingAlert) {
-                              Button("إلغاء",role: .cancel) { }
-                              Button("إنهاء",role: .destructive) { }
-                          }
-                          .foregroundColor(CustomColor.CustomDyellow)
-                          .font(.system(size: 24))
-                          .padding(10)
-                          
+                        showingAlert = true
+                    }
+                    .alert("هل تريد إنهاء اللعبة؟", isPresented: $showingAlert) {
+                        Button("إلغاء",role: .cancel) { }
+                        Button("إنهاء",role: .destructive) { }
+                    }
+                    .foregroundColor(CustomColor.CustomDyellow)
+                    .font(.system(size: 24))
+                    .padding(10)
+                    
                     
                     Spacer()
                     
                     Button("دعوة") {
                         showCode = true
-                          }
-                          .alert("رمز الدعوة:", isPresented: $showCode) {
-                              Button("نسخ",role: .cancel) { }
-                          } message: {
-                              Text("CBC1414")
-                              
-                          }
-                          .foregroundColor(CustomColor.CustomDyellow)
-                          .font(.system(size: 24))
-                          .padding(10)
+                    }
+                    .alert("رمز الدعوة:", isPresented: $showCode) {
+                        Button("نسخ",role: .cancel) { }
+                    } message: {
+                        Text("CBC1414")
+                        
+                    }
+                    .foregroundColor(CustomColor.CustomDyellow)
+                    .font(.system(size: 24))
+                    .padding(10)
                     
-                          
+                    
                 }.padding(30)//END OF HSTACK FOR THE BTNS
                 
-          
+                
                 HStack{
                     VStack(alignment:.trailing){
                         Text("\(team1Name)")
@@ -122,32 +176,39 @@ struct GameRoom: View {
                                     endPoint: .trailing))
                                 .frame(width:pct1, height: 18)
                         }
-                     
-                            //.padding(.top)
+                        
+                        //.padding(.top)
                     }.foregroundColor(.white)
                     Spacer()
-      
+                    
                     VStack{
                         Text("سارع بفك الشفرة وتنفيذ الطلب")
-                                     .foregroundColor(.white)
-                                     .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
-                                     .fontWeight(.regular)
-                                     .multilineTextAlignment(.trailing)
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.regular)
+                            .multilineTextAlignment(.trailing)
+                        //                        ZStack{
+                        //                        //THE SERIAL NUMBER FOR THE CODE
+                        //
+                        //                            //lightweightObjects
+                        //                           // var UniqueSet  = Set <String> ()
+                        //                            //uniqueShaffled
                         ZStack{
-                        //THE SERIAL NUMBER FOR THE CODE
-                       Text("7,28,4")
+                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                            //"\(team1Name)"
+                            Text(Current_Q)
                                 .foregroundColor(.white)
                                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                 .fontWeight(.semibold)
-                                //.multilineTextAlignment(.trailing)
-                                //.font(.system(family: "Helvetica"))
+                            //.multilineTextAlignment(.trailing)
+                            //.font(.system(family: "Helvetica"))
                             Capsule()
                                 .fill(.white.opacity(0.08))
                                 .frame(width: 290,height: 60)
                         }
-
+                        
                     }
-               
+                    
                     
                     
                     Spacer()
@@ -160,7 +221,7 @@ struct GameRoom: View {
                             .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
                             .fontWeight(.regular)
                             .multilineTextAlignment(.trailing)
-                       
+                        
                         ZStack(alignment:.leading){
                             ZStack{
                                 //Text(String(format: "%.0f", self.presnt * 100) + "%")
@@ -178,27 +239,29 @@ struct GameRoom: View {
                                 .frame(width: pct2, height: 18)
                         }
                     }.foregroundColor(.white)
-                       
+                    
                 }.padding(30)
-             
+                
                 //START OF THE CODE GRID...
-
                 
                 LazyVGrid(columns: clumns, spacing: 8) {
                     ForEach(keyValueItems) { item in
+                        
+                        
                         ZStack{
+                            
                             Rectangle()
                                 .fill(.white.opacity(0.09)).frame(width: 70,height: 70)
                                 .cornerRadius(13)
-                        
-                        HStack {
-                            Text("\(item.key)")
-                                .foregroundColor(.white)
-                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                .fontWeight(.semibold)
+                            
+                            HStack {
+                                Text("\(item.key)")
+                                    .foregroundColor(.white)
+                                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                    .fontWeight(.semibold)
                                 
-                        }
-
+                            }
+                            
                         }
                         ZStack{
                             Rectangle()
@@ -224,11 +287,12 @@ struct GameRoom: View {
                     
                     
                     Button {
-                        if CounterTeamOne + 10 <= 100 {
-                            CounterTeamOne += 10
-                        }
-                        showGotPoint=true
-
+                        ScoreFun(Current_Counter: &CounterTeamOne)
+                        //                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                        
+                        
+                        // showGotPoint=true
+                        
                     } label: {
                         ZStack{
                             
@@ -242,7 +306,7 @@ struct GameRoom: View {
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.trailing)
-                                Image("Ninja_with_stick")
+                                Image("ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
                                     .offset(y:15)
@@ -250,49 +314,44 @@ struct GameRoom: View {
                             }
                         }
                     }
-                    .alert("كفو والله!!", isPresented: $showGotPoint) {
-                                        Button("كمل 💪",role: .cancel) { }
-                                     }
+//                    .alert("كفو والله!!", isPresented: $showGotPoint) {
+//                        Button("كمل 💪",role: .cancel) { }
+//                    }
                     Spacer()
                     
                     Button {
-                        if CounterTeamTwo + 10 <= 100 {
-                            
-                            CounterTeamTwo += 10
-                           
-                            
-                        }
+                        ScoreFun(Current_Counter: &CounterTeamTwo)
                         
                         showGotPoint=true
-
-                    }
-                
-                    
-                
-                label: {
                         
-                        ZStack{
-                            Rectangle()
-                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLpurple,CustomColor.CustomDpurple]), startPoint: .top, endPoint: .bottom))
-                                .frame(width: 200, height: 220)
-                                .cornerRadius(13)
-//
-                            VStack{
-                                Text("\(team2Name)")
-                                    .foregroundColor(.white)
-                                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.trailing)
-                                Image("NINJA_SMILE")
-                                    .resizable()
-                                    .frame(width: 145,height: 145)
-                                    .offset(y:15)
-                            }
-                     
-                }   }
-                .alert("كفو والله!!", isPresented: $showGotPoint) {
-                                    Button("كمل 💪",role: .cancel) { }
-                                 }
+                    }
+                    
+                    
+                    
+                label: {
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLpurple,CustomColor.CustomDpurple]), startPoint: .top, endPoint: .bottom))
+                            .frame(width: 200, height: 220)
+                            .cornerRadius(13)
+                        //
+                        VStack{
+                            Text("\(team2Name)")
+                                .foregroundColor(.white)
+                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.trailing)
+                            Image("NINJA_SMILE")
+                                .resizable()
+                                .frame(width: 145,height: 145)
+                                .offset(y:15)
+                        }
+                        
+                    }   }
+//                .alert("كفو والله!!", isPresented: $showGotPoint) {
+//                    Button("كمل 💪",role: .cancel) { }
+//                }
                     
                     
                     
@@ -300,53 +359,74 @@ struct GameRoom: View {
                 }.padding(30)
                 //HSTACK FOR THE BTN COUNTER END ...
                 
+                
+                
+                //                ZStack{
+                //                    //THE SERIAL NUMBER FOR THE CODE
+                //
+                //                    //lightweightObjects
+                //                    // var UniqueSet  = Set <String> ()
+                //                    //uniqueShaffled
+                //
+                //                    let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                //                    //"\(team1Name)"
+                //                    Text(Current_Q)
+                //                        .foregroundColor(.white)
+                //                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                //                        .fontWeight(.semibold)
+                //                    //.multilineTextAlignment(.trailing)
+                //                    //.font(.system(family: "Helvetica"))
+                //                    Capsule()
+                //                        .fill(.white.opacity(0.08))
+                //                        .frame(width: 290,height: 60)
+                //                }.offset( y: -960)
+                //
                     .navigationBarBackButtonHidden(true)
                 
                 
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                 }// END OF VSTACK
-            }
-       
-      
-    }    }
-
-func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String? {
-    
-    while true {
-       Array1 = Array1.shuffled()
-        
-        for i in Array1 {
-            if !UniqueSet1.contains(i) {
-                UniqueSet1.insert(i)
-                return i
-            }
+            }// END OF VSTACK
         }
-        
-        UniqueSet1.removeAll()
         
     }
     
+    func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String {
+        
+        while true {
+            Array1 = Array1.shuffled()
+            
+            for i in Array1 {
+                if !UniqueSet1.contains(i) {
+                    UniqueSet1.insert(i)
+                    return i
+                }
+            }
+            
+            UniqueSet1.removeAll()
+            
+        }
+        
+        
+    }}
+
+
+func ScoreFun ( Current_Counter: inout Int){
+    if Current_Counter + 10 <= 100 {
+        
+        Current_Counter += 10
+    }
+}
     
-}
+    
+    struct KeyValueItem: Identifiable {
+        let id: UUID
+        let key: Int
+        let value: String
+    }
+    
+    
+    #Preview {
+        GameRoom(team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
+    }
 
-
-struct KeyValueItem: Identifiable {
-    let id: UUID
-    let key: Int
-    let value: String
-}
-
-
-#Preview {
-    GameRoom(team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
-}

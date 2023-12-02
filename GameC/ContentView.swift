@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     //@State var isActive: Bool = false
     var objectCripto : [String]=["a","b","c","E","F","G","H","I","J","K"]
-    var UniqueSet  = Set <String> ()
+        //  var UniqueSet  = Set <String> ()
     
    // var res : String
     var body: some View {
