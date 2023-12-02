@@ -11,6 +11,11 @@ struct Winner: View {
       @State private var isButtonTapped = false
       let results = ["عشاء الفريق الفايز اليوم عليكم", "قهوة الفريق الفايز عليكم"].shuffled()
     
+    
+        @Binding var CounterTeamOne : Int
+        @Binding var CounterTeamTwo : Int
+        @Binding var team1Name : String
+        @Binding var team2Name : String
     var body: some View {
           
                 ZStack{
@@ -29,24 +34,68 @@ struct Winner: View {
                       GroupBox {
                             VStack{
                                 
-                                  Text("الفريق الاول")
+                                if CounterTeamOne > CounterTeamTwo {
+                                                                    
+                                                                    StrokeText(text: "\(team1Name)", width: 0.5, color: .customLyellow)
+                                                                      //Text("الفريق الاول")
+                                                                    
+                                                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                                                            .fontWeight(.bold)
+                                                                            .foregroundColor(Color.white)
+                                                                            .frame(width: 400.0, height: 200.0)
+                                                                      
+                                                                            .offset(x:0, y: -37)
+                                                                      
+                                                                      Text("النتيجة \(CounterTeamOne)")
+                                                                            .foregroundColor(Color.white)
+                                                                            .padding()
+                                                                            .frame(width: 310, height: 50)
+                                                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                                                            .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
+                                                                      
+                                                                            .cornerRadius(40)
+                                                                            .offset(x:0, y: -50)
+                                                                } else{
+                                                                    StrokeText(text: "\(team2Name)", width: 0.5, color: .customLyellow)
+                                                                      //Text("الفريق الاول")
+                                                                    
+                                                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                                                            .fontWeight(.bold)
+                                                                            .foregroundColor(Color.white)
+                                                                            .frame(width: 400.0, height: 200.0)
+                                                                      
+                                                                            .offset(x:0, y: -37)
+                                                                      
+                                                                      Text("النتيجة \(CounterTeamTwo)")
+                                                                            .foregroundColor(Color.white)
+                                                                            .padding()
+                                                                            .frame(width: 310, height: 50)
+                                                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                                                            .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
+                                                                      
+                                                                            .cornerRadius(40)
+                                                                            .offset(x:0, y: -50)
+                                                                    
+                                                                }
                                 
-                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.white)
-                                        .frame(width: 400.0, height: 200.0)
-                                  
-                                        .offset(x:0, y: -37)
-                                  
-                                  Text("النتيجة ٦٠/١٠٠")
-                                        .foregroundColor(Color.white)
-                                        .padding()
-                                        .frame(width: 310, height: 50)
-                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                        .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
-                                  
-                                        .cornerRadius(40)
-                                        .offset(x:0, y: -50)
+//                                  Text("الفريق الاول")
+//                                
+//                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+//                                        .fontWeight(.bold)
+//                                        .foregroundColor(Color.white)
+//                                        .frame(width: 400.0, height: 200.0)
+//                                  
+//                                        .offset(x:0, y: -37)
+//                                  
+//                                  Text("النتيجة ٦٠/١٠٠")
+//                                        .foregroundColor(Color.white)
+//                                        .padding()
+//                                        .frame(width: 310, height: 50)
+//                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+//                                        .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
+//                                  
+//                                        .cornerRadius(40)
+//                                        .offset(x:0, y: -50)
                                   
                                        // Spacer()
                                   ZStack{ RoundedRectangle(cornerRadius: 40)
@@ -54,7 +103,8 @@ struct Winner: View {
                                               .foregroundColor(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
                                         
                                         VStack{
-                                              Text("عقاب الخسرانين")
+                                            StrokeText(text: "عقاب الخسرانين", width: 0.5, color: .customLyellow)
+                                             
                                                     .padding(.bottom, 80)
                                                     .frame(width: 350, height: 50)
                                                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -137,6 +187,25 @@ struct AnotherPageView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Winner()
+        Winner(CounterTeamOne: .constant(0),CounterTeamTwo: .constant(0), team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
+    }
+}
+
+struct StrokeText: View {
+    let text: String
+    let width: CGFloat
+    let color: Color
+
+    var body: some View {
+        ZStack{
+            ZStack{
+                Text(text).offset(x:  width, y:  width)
+                Text(text).offset(x: -width, y: -width)
+                Text(text).offset(x: -width, y:  width)
+                Text(text).offset(x:  width, y: -width)
+            }
+            .foregroundColor(color)
+            Text(text)
+        }
     }
 }

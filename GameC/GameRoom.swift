@@ -11,8 +11,8 @@ struct GameRoom: View {
     @State private var showingAlert = false
     @State private var showCode = false
     @State private var showGotPoint = false
-    @State private var CounterTeamOne = 0
-    @State private var CounterTeamTwo = 0
+    @State  var CounterTeamOne = 0
+    @State  var CounterTeamTwo = 0
     @State private var presnt : CGFloat = 003
     
     @State private var navigationActive: Bool = false
