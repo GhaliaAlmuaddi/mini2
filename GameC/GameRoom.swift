@@ -69,6 +69,7 @@ struct GameRoom: View {
     @Binding var team1Name : String
     @Binding var team2Name : String
     
+    @State var sheetShowing = false
     //ARRAY FOR THE GRID
     let clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
     // Data model for the code grids
@@ -107,10 +108,11 @@ struct GameRoom: View {
     
     @State var Current_Q  = ""
     
+    
     var body: some View {
         
         //  var Current_Q : String
-        
+      
         ZStack {
             //BACKGROUND START...
             AngularGradient(
@@ -294,7 +296,9 @@ struct GameRoom: View {
                         Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         
                         ScoreFun(Current_Counter: &CounterTeamOne)
-                        
+                        if (CounterTeamOne == 100){
+                            sheetShowing.toggle()
+                        }
                         
                         //                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         
@@ -318,10 +322,13 @@ struct GameRoom: View {
                                     .resizable()
                                     .frame(width: 150,height: 150)
                                     .offset(y:15)
+                                    .fullScreenCover(isPresented:$sheetShowing){
+                                        Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
+                                    }
                                 
                             }
                         }
-                    }
+                  
 //                    .alert("كفو والله!!", isPresented: $showGotPoint) {
 //                        Button("كمل 💪",role: .cancel) { }
 //                    }
@@ -333,7 +340,9 @@ struct GameRoom: View {
                         ScoreFun(Current_Counter: &CounterTeamTwo)
                         
                         showGotPoint=true
-                        
+                        if (CounterTeamTwo == 100){
+                            sheetShowing.toggle()
+                        }
                     }
                     
                     
@@ -356,6 +365,8 @@ struct GameRoom: View {
                                 .resizable()
                                 .frame(width: 145,height: 145)
                                 .offset(y:15)
+                                .fullScreenCover(isPresented:$sheetShowing){
+                                    Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
                         }
                         
                     }   }
@@ -434,6 +445,11 @@ func ScoreFun ( Current_Counter: inout Int){
         let key: Int
         let value: String
     }
+
+//func KeyShaffled(Array1: inout [KeyValueItem]){
+//    Array1=Array1.shuffled()
+//    return Array1
+//}
     
     
     #Preview {
