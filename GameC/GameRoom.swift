@@ -6,6 +6,36 @@
 //
 
 import SwiftUI
+import AVKit
+//import AVFoundation
+
+//Sound MangerSound class for audios
+class SoundManger {
+    static let incstance = SoundManger()
+    
+    var player: AVAudioPlayer?
+    
+    enum SoundOption:String{
+    case hit
+    case gong
+    case cinematic
+    }
+    
+    func playSound(sound: SoundOption){
+        
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".mp3") else { return }
+        
+        do{
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        }catch let error{
+            print("Error Play the sound.\(error.localizedDescription)")
+        }
+       
+        
+    }
+    
+}
 
 struct GameRoom: View {
     @State private var showingAlert = false
@@ -290,17 +320,20 @@ struct GameRoom: View {
                         Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         
                         ScoreFun(Current_Counter: &CounterTeamOne)
+                        
+                        SoundManger.incstance.playSound(sound: .hit)
+                        
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
                         }
-                        
+                       
                        
                         
                     } label: {
                         ZStack{
                             
                             Rectangle()
-                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLyellow,CustomColor.CustomDyellow]), startPoint: .top, endPoint: .bottom))
+                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 200, height: 220) .cornerRadius(13)
                             
                             VStack{
@@ -318,8 +351,10 @@ struct GameRoom: View {
                                     }
                                 
                             }
+                        
                         }
-                  
+                        
+                        
 //                    .alert("كفو والله!!", isPresented: $showGotPoint) {
 //                        Button("كمل 💪",role: .cancel) { }
 //                    }
@@ -330,10 +365,13 @@ struct GameRoom: View {
                         Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         ScoreFun(Current_Counter: &CounterTeamTwo)
                         
+                        SoundManger.incstance.playSound(sound: .hit)
+                        
                         showGotPoint=true
                         if (CounterTeamTwo == 100){
                             sheetShowing.toggle()
                         }
+                       
                     }
                     
                     
@@ -342,7 +380,7 @@ struct GameRoom: View {
                     
                     ZStack{
                         Rectangle()
-                            .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomLpurple,CustomColor.CustomDpurple]), startPoint: .top, endPoint: .bottom))
+                            .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                             .frame(width: 200, height: 220)
                             .cornerRadius(13)
                         //
