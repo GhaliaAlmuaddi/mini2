@@ -104,6 +104,9 @@ struct GameRoom: View {
         
     ].shuffled()
     
+    
+    @State var Current_Q  = ""
+    
     var body: some View {
         
         //  var Current_Q : String
@@ -194,7 +197,7 @@ struct GameRoom: View {
                         //                           // var UniqueSet  = Set <String> ()
                         //                            //uniqueShaffled
                         ZStack{
-                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                        //    let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                             //"\(team1Name)"
                             Text(Current_Q)
                                 .foregroundColor(.white)
@@ -287,7 +290,12 @@ struct GameRoom: View {
                     
                     
                     Button {
+                        
+                        Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                        
                         ScoreFun(Current_Counter: &CounterTeamOne)
+                        
+                        
                         //                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         
                         
@@ -320,6 +328,8 @@ struct GameRoom: View {
                     Spacer()
                     
                     Button {
+                        
+                        Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
                         ScoreFun(Current_Counter: &CounterTeamTwo)
                         
                         showGotPoint=true
