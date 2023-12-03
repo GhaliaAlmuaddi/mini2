@@ -71,7 +71,8 @@ struct GameRoom: View {
     
     @State var sheetShowing = false
     //ARRAY FOR THE GRID
-    let clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
+    
+    @State var clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
     // Data model for the code grids
     @State var keyValueItems = [
         KeyValueItem(id: UUID(), key: 10, value: "ض"),
@@ -103,15 +104,14 @@ struct GameRoom: View {
         KeyValueItem(id: UUID(), key: 3, value: "ش"),
         KeyValueItem(id: UUID(), key: 15, value: "ص"),
         
-    ].shuffled()
+    ]
     
     
     @State var Current_Q  = ""
     
     
     var body: some View {
-        
-        //  var Current_Q : String
+
       
         ZStack {
             //BACKGROUND START...
@@ -192,15 +192,9 @@ struct GameRoom: View {
                             .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
                             .fontWeight(.regular)
                             .multilineTextAlignment(.trailing)
-                        //                        ZStack{
-                        //                        //THE SERIAL NUMBER FOR THE CODE
-                        //
-                        //                            //lightweightObjects
-                        //                           // var UniqueSet  = Set <String> ()
-                        //                            //uniqueShaffled
+                      
                         ZStack{
-                        //    let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
-                            //"\(team1Name)"
+                        
                             Text(Current_Q)
                                 .foregroundColor(.white)
                                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
@@ -250,9 +244,9 @@ struct GameRoom: View {
                 //START OF THE CODE GRID...
                 
                 LazyVGrid(columns: clumns, spacing: 8) {
-                    ForEach(keyValueItems) { item in
-                        
-                        
+                    ForEach(keyValueItems.shuffled()) { item in
+                       
+                       
                         ZStack{
                             
                             Rectangle()
@@ -300,10 +294,7 @@ struct GameRoom: View {
                             sheetShowing.toggle()
                         }
                         
-                        //                            let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
-                        
-                        
-                        // showGotPoint=true
+                       
                         
                     } label: {
                         ZStack{
@@ -382,26 +373,7 @@ struct GameRoom: View {
                 
                 
                 
-                //                ZStack{
-                //                    //THE SERIAL NUMBER FOR THE CODE
-                //
-                //                    //lightweightObjects
-                //                    // var UniqueSet  = Set <String> ()
-                //                    //uniqueShaffled
-                //
-                //                    let Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
-                //                    //"\(team1Name)"
-                //                    Text(Current_Q)
-                //                        .foregroundColor(.white)
-                //                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                //                        .fontWeight(.semibold)
-                //                    //.multilineTextAlignment(.trailing)
-                //                    //.font(.system(family: "Helvetica"))
-                //                    Capsule()
-                //                        .fill(.white.opacity(0.08))
-                //                        .frame(width: 290,height: 60)
-                //                }.offset( y: -960)
-                //
+             
                     .navigationBarBackButtonHidden(true)
                 
                 
@@ -446,10 +418,6 @@ func ScoreFun ( Current_Counter: inout Int){
         let value: String
     }
 
-//func KeyShaffled(Array1: inout [KeyValueItem]){
-//    Array1=Array1.shuffled()
-//    return Array1
-//}
     
     
     #Preview {
