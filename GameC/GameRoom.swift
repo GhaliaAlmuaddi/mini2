@@ -18,7 +18,9 @@ class SoundManger {
     enum SoundOption:String{
     case hit
     case gong
-    case cinematic
+    case rising
+    case punch
+    case big_punch
     }
     
     func playSound(sound: SoundOption){
