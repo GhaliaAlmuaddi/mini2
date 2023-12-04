@@ -160,9 +160,9 @@ struct GameRoom: View {
                     Button("إنهاء") {
                         showingAlert = true
                     }
-                    .alert("هل تريد إنهاء اللعبة؟", isPresented: $showingAlert) {
-                        Button("إلغاء",role: .cancel) { }
-                        Button("إنهاء",role: .destructive) { }
+                    .alert("طفشتوا،تبغ،ن تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showingAlert) {
+                        Button("لا",role: .cancel) { }
+                        Button("اي",role: .destructive) { }
                     }
                     .foregroundColor(CustomColor.CustomDyellow)
                     .font(.system(size: 24))
@@ -324,7 +324,9 @@ struct GameRoom: View {
                         ScoreFun(Current_Counter: &CounterTeamOne)
                         
                         SoundManger.incstance.playSound(sound: .hit)
-                        
+//                        if (lightweightObjects.count == 9){
+//                            print("yay")
+//                        }
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
                         }
@@ -356,10 +358,6 @@ struct GameRoom: View {
                         
                         }
                         
-                        
-//                    .alert("كفو والله!!", isPresented: $showGotPoint) {
-//                        Button("كمل 💪",role: .cancel) { }
-//                    }
                     Spacer()
                     
                     Button {
