@@ -49,53 +49,103 @@ struct GameRoom: View {
     
     @State private var navigationActive: Bool = false
     
-    @State var lightweightObjects: [String] = [
-        "كتاب",
-        "لمبة",
-        "ستارة",
-        "ساعة حائط",
-        "مصباح",
-        "صحن",
-        "مشغل موسيقى",
-        "فنجان قهوة",
-        "ملعقة",
-        "شمعة",
-        "مزهرية",
-        "إطار صورة",
-        "قلم رصاص",
-        "كرة تنس",
-        "سلة نفايات",
-        "مرآة صغيرة",
-        "منديل ورقي",
-        "حلق",
-        "كرة الشاطئ",
-        "مظلة صغيرة",
-        "محفظة",
-        "ساعة معصم",
-        "أقلام ملونة",
-        "كاميرا فورية",
-        "مشط",
-        "صابون صغير",
-        "كرسي مطوي",
-        "مفكرة",
-        "قميص خفيف",
-        "هاتف جوال",
-        "حقيبة صغيرة",
-        "مفاتيح السيارة",
-        "نظارات شمسية",
-        "كرة طائرة",
-        "سماعات أذن",
-        "قنينة ماء",
-        "لوحة فنية صغيرة",
-        "قطعة أثاث من البامبو",
-        "ورق تغليف هدايا",
-        "سجادة صغيرة",
-        "شمسية محمولة",
-        "حقيبة ظهر صغيرة",
-        "كرة تنس الطاولة",
-        "نبات داخلي صغير",
-    ]
-    @State var UniqueSet  = Set <String> ()
+//    @State var ٍٍRequestsAndOrders: [Objects] = [
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "كتاب"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "لعبة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "ساعه حائط"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "روج"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "عطر"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "مقص اظافر"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "مفتاح سيارة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "مرطب شفاه"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "سماعة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "ملعقة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String : "شمعة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String : "تحفة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "تحفة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "فنجان"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "مزهرية"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "سلة نفايات"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "سجادة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "مراية صغيرة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "سلة نفايات"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "كرتون مناديل"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "حلق"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "نظارات شمسية"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "نظارات طبيه"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "محفظة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "خمسه ريال"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "قلم رصاص"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "قميص"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "محفظة"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String:"مشط"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "خلخال"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "كمامه"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "صابون"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "ساعة يد"),
+//        Objects(Encrypted_String: "10", AfterDecoded_String: "ربطة"),
+//
+//       ]
+    
+    @State var RequestsAndOrders: [KeyValueItem] = [
+        
+        //Writer : Ghalia , Reviwer : Amal abughazalah
+           KeyValueItem(id: UUID(),key: "10", value: "كتاب"),
+           KeyValueItem(id: UUID(),key: "10", value: "لعبة"),
+           KeyValueItem(id: UUID(),key: "10", value: "ساعه حائط"),
+           KeyValueItem(id: UUID(),key: "10", value: "روج"),
+           KeyValueItem(id: UUID(),key: "10", value: "عطر"),
+           KeyValueItem(id: UUID(),key: "10", value: "مقص اظافر"),
+           KeyValueItem(id: UUID(),key: "10", value: "مفتاح سيارة"),
+           
+           
+           //Writer : Tahani , Reviwer : Ghalia
+           KeyValueItem(id: UUID(),key: "10", value: "مرطب شفاه"),
+           KeyValueItem(id: UUID(),key: "10", value: "سماعة"),
+           KeyValueItem(id: UUID(),key: "10", value: "ملعقة"),
+           KeyValueItem(id: UUID(),key: "10", value: "شمعة"),
+           KeyValueItem(id: UUID(),key: "10", value: "تحفة"),
+           KeyValueItem(id: UUID(),key: "10", value: "فنجان"),
+           KeyValueItem(id: UUID(),key: "10", value: "مزهرية"),
+           
+           //Writer : Samaa , Reviwer : Amal Alotaibi
+           KeyValueItem(id: UUID(), key: "10", value: "سلة نفايات"),
+           KeyValueItem(id: UUID(), key: "10", value: "سجادة"),
+           KeyValueItem(id: UUID(), key: "10", value: "مراية صغيرة"),
+           KeyValueItem(id: UUID(), key: "10", value: "سلة نفايات"),
+           KeyValueItem(id: UUID(), key: "10", value: "كرتون مناديل"),
+           KeyValueItem(id: UUID(), key: "10", value: "حلق"),
+           KeyValueItem(id: UUID(), key: "10", value: "نظارات شمسية"),
+           
+           //Writer : Amal abughazalah , Reviwer : Tahani
+           KeyValueItem(id: UUID(), key: "10", value: "نظارات طبيه"),
+           KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
+           KeyValueItem(id: UUID(), key: "10", value: "خمسه ريال"),
+           KeyValueItem(id: UUID(), key: "10", value: "قلم رصاص"),
+           KeyValueItem(id: UUID(), key: "10", value: "قميص"),
+           KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
+           KeyValueItem(id: UUID(), key: "10", value: "مشط"),
+           
+           //Writer : Amal alotaibi , Reviwer : Samaa
+           KeyValueItem(id: UUID(), key: "10", value: "خلخال"),
+           KeyValueItem(id: UUID(), key: "10", value: "كمامه"),
+           KeyValueItem(id: UUID(), key: "10", value: "صابون"),
+           KeyValueItem(id: UUID(), key: "10", value: "ساعة يد"),
+           KeyValueItem(id: UUID(), key: "10", value: "ربطة"),
+           KeyValueItem(id: UUID(), key: "10", value: "سفرة"),
+           KeyValueItem(id: UUID(), key: "10", value: "جزمة"),
+           
+           
+           //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
+           ///لسى ماتوزعت نبغى نكملها
+           KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
+           KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
+           
+
+       ]
+    
+
+    @State var UniqueSet  = Set <KeyValueItem> ()
     
     
     @Binding var team1Name : String
@@ -107,34 +157,34 @@ struct GameRoom: View {
     @State var clumns = Array(repeating: GridItem(.flexible(),spacing: 8), count:8)
     // Data model for the code grids
     @State var keyValueItems = [
-        KeyValueItem(id: UUID(), key: 10, value: "ض"),
-        KeyValueItem(id: UUID(), key: 8, value: "ط"),
-        KeyValueItem(id: UUID(), key: 16, value: "ظ"),
-        KeyValueItem(id: UUID(), key: 26, value: "ع"),
-        KeyValueItem(id: UUID(), key: 17, value: "غ"),
-        KeyValueItem(id: UUID(), key: 28, value: "ف"),
-        KeyValueItem(id: UUID(), key: 27, value: "ق"),
-        KeyValueItem(id: UUID(), key: 7, value:  "ك"),
-        KeyValueItem(id: UUID(), key: 25, value: "ل"),
-        KeyValueItem(id: UUID(), key: 22, value: "م"),
-        KeyValueItem(id: UUID(), key: 12, value: "ن"),
-        KeyValueItem(id: UUID(), key: 19, value: "ه(ة)"),
-        KeyValueItem(id: UUID(), key: 14, value: "و"),
-        KeyValueItem(id: UUID(), key: 21, value: "ي"),
-        KeyValueItem(id: UUID(), key: 1, value: "ا(ء)"),
-        KeyValueItem(id: UUID(), key: 24, value: "ب"),
-        KeyValueItem(id: UUID(), key: 13, value: "ت"),
-        KeyValueItem(id: UUID(), key: 11, value: "ث"),
-        KeyValueItem(id: UUID(), key: 9, value: "ج"),
-        KeyValueItem(id: UUID(), key: 5, value: "ح"),
-        KeyValueItem(id: UUID(), key: 2, value: "خ"),
-        KeyValueItem(id: UUID(), key: 6, value: "د"),
-        KeyValueItem(id: UUID(), key: 4, value: "ذ"),
-        KeyValueItem(id: UUID(), key: 20, value: "ر"),
-        KeyValueItem(id: UUID(), key: 23, value: "ز"),
-        KeyValueItem(id: UUID(), key: 18, value: "س"),
-        KeyValueItem(id: UUID(), key: 3, value: "ش"),
-        KeyValueItem(id: UUID(), key: 15, value: "ص"),
+        KeyValueItem(id: UUID(), key: "10" , value: "ض"),
+        KeyValueItem(id: UUID(), key: "8", value: "ط"),
+        KeyValueItem(id: UUID(), key: "16", value: "ظ"),
+        KeyValueItem(id: UUID(), key: "26", value: "ع"),
+        KeyValueItem(id: UUID(), key: "17", value: "غ"),
+        KeyValueItem(id: UUID(), key: "28", value: "ف"),
+        KeyValueItem(id: UUID(), key: "27", value: "ق"),
+        KeyValueItem(id: UUID(), key: "7", value:  "ك"),
+        KeyValueItem(id: UUID(), key: "25", value: "ل"),
+        KeyValueItem(id: UUID(), key: "22", value: "م"),
+        KeyValueItem(id: UUID(), key: "12", value: "ن"),
+        KeyValueItem(id: UUID(), key: "19", value: "ه(ة)"),
+        KeyValueItem(id: UUID(), key: "14", value: "و"),
+        KeyValueItem(id: UUID(), key: "21", value: "ي"),
+        KeyValueItem(id: UUID(), key: "1", value: "ا(ء)"),
+        KeyValueItem(id: UUID(), key: "24", value: "ب"),
+        KeyValueItem(id: UUID(), key: "13", value: "ت"),
+        KeyValueItem(id: UUID(), key: "11", value: "ث"),
+        KeyValueItem(id: UUID(), key: "9", value: "ج"),
+        KeyValueItem(id: UUID(), key: "5", value: "ح"),
+        KeyValueItem(id: UUID(), key: "2", value: "خ"),
+        KeyValueItem(id: UUID(), key: "6", value: "د"),
+        KeyValueItem(id: UUID(), key: "4", value: "ذ"),
+        KeyValueItem(id: UUID(), key: "20", value: "ر"),
+        KeyValueItem(id: UUID(), key: "23", value: "ز"),
+        KeyValueItem(id: UUID(), key: "18", value: "س"),
+        KeyValueItem(id: UUID(), key: "3", value: "ش"),
+        KeyValueItem(id: UUID(), key: "15", value: "ص")
         
     ]
     
@@ -319,7 +369,7 @@ struct GameRoom: View {
                     
                     Button {
                         
-                        Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                        Current_Q = uniqueShaffled(Array1: &RequestsAndOrders , UniqueSet1: &UniqueSet)
                         
                         ScoreFun(Current_Counter: &CounterTeamOne)
                         
@@ -368,7 +418,7 @@ struct GameRoom: View {
                     
                     Button {
                         
-                        Current_Q = uniqueShaffled(Array1: &lightweightObjects,UniqueSet1: &UniqueSet)
+                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                         ScoreFun(Current_Counter: &CounterTeamTwo)
                         
                         SoundManger.incstance.playSound(sound: .hit)
@@ -432,7 +482,7 @@ struct GameRoom: View {
         
     }
     
-    func uniqueShaffled(Array1: inout [String],UniqueSet1 : inout Set<String>)-> String {
+    func uniqueShaffled(Array1: inout [KeyValueItem],UniqueSet1 : inout Set<KeyValueItem>)-> String {
         
         while true {
             Array1 = Array1.shuffled()
@@ -440,7 +490,7 @@ struct GameRoom: View {
             for i in Array1 {
                 if !UniqueSet1.contains(i) {
                     UniqueSet1.insert(i)
-                    return i
+                    return i.key
                 }
             }
             
@@ -460,11 +510,16 @@ func ScoreFun ( Current_Counter: inout Int){
 }
     
     
-    struct KeyValueItem: Identifiable {
+    struct KeyValueItem: Identifiable, Hashable {
         let id: UUID
-        let key: Int
+        let key: String
         let value: String
     }
+
+struct Objects {
+    let Encrypted_String: String
+    let AfterDecoded_String: String
+}
 
     
     
