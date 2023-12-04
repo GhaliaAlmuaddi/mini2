@@ -338,7 +338,13 @@ struct GameRoom: View {
                             
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
-                                .frame(width: 200, height: 220) .cornerRadius(13)
+                                .frame(width: 220, height: 220) .cornerRadius(13)
+                            Image("finished1")
+                            .resizable()
+                            .frame(width: 230, height:150)
+                            .cornerRadius(13)
+                            .offset(x:15)
+                           
                             
                             VStack{
                                 Text("\(team1Name)")
@@ -381,9 +387,13 @@ struct GameRoom: View {
                     ZStack{
                         Rectangle()
                             .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
-                            .frame(width: 200, height: 220)
-                            .cornerRadius(13)
-                        //
+                            .frame(width: 220, height: 220) .cornerRadius(13)
+                        Image("finished1")
+                        .resizable()
+                        .frame(width: 230, height:150)
+                        .cornerRadius(13)
+                        .offset(x:15)
+                       
                         VStack{
                             Text("\(team2Name)")
                                 .foregroundColor(.white)
