@@ -89,7 +89,7 @@ struct GameRoom: View {
     
     @State var RequestsAndOrders: [KeyValueItem] = [
         
-        //Writer : Ghalia , Reviwer : Amal abughazalah
+        //Writer : Ghalia , Reviewer : Amal abughazalah
            KeyValueItem(id: UUID(),key: "10", value: "كتاب"),
            KeyValueItem(id: UUID(),key: "10", value: "لعبة"),
            KeyValueItem(id: UUID(),key: "10", value: "ساعه حائط"),
@@ -99,7 +99,7 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(),key: "10", value: "مفتاح سيارة"),
            
            
-           //Writer : Tahani , Reviwer : Ghalia
+           //Writer : Tahani , Reviewer : Ghalia
            KeyValueItem(id: UUID(),key: "10", value: "مرطب شفاه"),
            KeyValueItem(id: UUID(),key: "10", value: "سماعة"),
            KeyValueItem(id: UUID(),key: "10", value: "ملعقة"),
@@ -108,7 +108,7 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(),key: "10", value: "فنجان"),
            KeyValueItem(id: UUID(),key: "10", value: "مزهرية"),
            
-           //Writer : Samaa , Reviwer : Amal Alotaibi
+           //Writer : Samaa , Reviewer : Amal Alotaibi
            KeyValueItem(id: UUID(), key: "10", value: "سلة نفايات"),
            KeyValueItem(id: UUID(), key: "10", value: "سجادة"),
            KeyValueItem(id: UUID(), key: "10", value: "مراية صغيرة"),
@@ -117,7 +117,7 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(), key: "10", value: "حلق"),
            KeyValueItem(id: UUID(), key: "10", value: "نظارات شمسية"),
            
-           //Writer : Amal abughazalah , Reviwer : Tahani
+           //Writer : Amal abughazalah , Reviewer : Tahani
            KeyValueItem(id: UUID(), key: "10", value: "نظارات طبيه"),
            KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
            KeyValueItem(id: UUID(), key: "10", value: "خمسه ريال"),
@@ -126,7 +126,7 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
            KeyValueItem(id: UUID(), key: "10", value: "مشط"),
            
-           //Writer : Amal alotaibi , Reviwer : Samaa
+           //Writer : Amal alotaibi , Reviewer : Samaa
            KeyValueItem(id: UUID(), key: "10", value: "خلخال"),
            KeyValueItem(id: UUID(), key: "10", value: "كمامه"),
            KeyValueItem(id: UUID(), key: "10", value: "صابون"),
