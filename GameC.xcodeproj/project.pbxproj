@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04C1E56B2B171D3700DDF277 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E56A2B171D3700DDF277 /* Winner.swift */; };
-		22331CD82B1D9BC900910264 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22331CD72B1D9BC900910264 /* hit.mp3 */; };
 		22331CDA2B1D9DCA00910264 /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22331CD92B1D9DCA00910264 /* punch.mp3 */; };
 		223975BC2B15CDAA009D9275 /* GameRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223975BB2B15CDA9009D9275 /* GameRoom.swift */; };
 		22A5C6352B1D15BC00BCA611 /* gong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A5C6342B1D15BC00BCA611 /* gong.mp3 */; };
@@ -17,6 +16,7 @@
 		29570B452B15D55D00DFCF2E /* Desc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B442B15D55D00DFCF2E /* Desc1.swift */; };
 		29570B472B15D56E00DFCF2E /* Desc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B462B15D56E00DFCF2E /* Desc2.swift */; };
 		29570B492B15D57F00DFCF2E /* Desc3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B482B15D57F00DFCF2E /* Desc3.swift */; };
+		29B524D42B1DB46D008F1480 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29B524D32B1DB46D008F1480 /* hit.mp3 */; };
 		3A7840E42B1874D000A1CCCC /* VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7840E32B1874D000A1CCCC /* VS.swift */; };
 		903E652B2B14F745000ED931 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E652A2B14F745000ED931 /* HomePage.swift */; };
 		9042385C2B1B924D00AB8228 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042385B2B1B924D00AB8228 /* GameModel.swift */; };
@@ -31,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		04C1E56A2B171D3700DDF277 /* Winner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
-		22331CD72B1D9BC900910264 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hit.mp3; path = "../../../../Downloads/critical-hit-sound-effect/hit.mp3"; sourceTree = "<group>"; };
 		22331CD92B1D9DCA00910264 /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
 		223975BB2B15CDA9009D9275 /* GameRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoom.swift; sourceTree = "<group>"; };
 		22A5C6342B1D15BC00BCA611 /* gong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gong.mp3; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		29570B442B15D55D00DFCF2E /* Desc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc1.swift; sourceTree = "<group>"; };
 		29570B462B15D56E00DFCF2E /* Desc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc2.swift; sourceTree = "<group>"; };
 		29570B482B15D57F00DFCF2E /* Desc3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc3.swift; sourceTree = "<group>"; };
+		29B524D32B1DB46D008F1480 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		3A7840E32B1874D000A1CCCC /* VS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VS.swift; sourceTree = "<group>"; };
 		903E652A2B14F745000ED931 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		9042385B2B1B924D00AB8228 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				22331CD92B1D9DCA00910264 /* punch.mp3 */,
-				22331CD72B1D9BC900910264 /* hit.mp3 */,
+				29B524D32B1DB46D008F1480 /* hit.mp3 */,
 				22A5C6342B1D15BC00BCA611 /* gong.mp3 */,
 			);
 			path = Sounds;
@@ -182,7 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22331CD82B1D9BC900910264 /* hit.mp3 in Resources */,
+				29B524D42B1DB46D008F1480 /* hit.mp3 in Resources */,
 				90DA0A5A2B10DBE800C97E85 /* Preview Assets.xcassets in Resources */,
 				22331CDA2B1D9DCA00910264 /* punch.mp3 in Resources */,
 				90DA0A572B10DBE800C97E85 /* Assets.xcassets in Resources */,
