@@ -109,14 +109,13 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(),key: "10", value: "مزهرية"),
            
            //Writer : Samaa , Reviewer : Amal Alotaibi
-           KeyValueItem(id: UUID(), key: "10", value: "سلة نفايات"),
-           KeyValueItem(id: UUID(), key: "10", value: "سجادة"),
-           KeyValueItem(id: UUID(), key: "10", value: "مراية صغيرة"),
-           KeyValueItem(id: UUID(), key: "10", value: "سلة نفايات"),
-           KeyValueItem(id: UUID(), key: "10", value: "كرتون مناديل"),
-           KeyValueItem(id: UUID(), key: "10", value: "حلق"),
-           KeyValueItem(id: UUID(), key: "10", value: "نظارات شمسية"),
-           
+           KeyValueItem(id: UUID(), key: "13,1,21,1,28,12,19,25,18", value: "سلة نفايات"),
+           KeyValueItem(id: UUID(), key: "19,6,1,9,18", value: "سجادة"),
+           KeyValueItem(id: UUID(), key: "19,20,21,17,15,19,21,1,20,22", value: "مراية صغيرة"),
+           KeyValueItem(id: UUID(), key: "25,21,6,1,12,22,12,14,13,20,7", value: "كرتون مناديل"),
+           KeyValueItem(id: UUID(), key: "27,25,5", value: "حلق"),
+           KeyValueItem(id: UUID(), key: "19,21,18,22,3,13,1,20,1,16,12", value: "نظارات شمسية"),
+           KeyValueItem(id: UUID(), key: "12,1,12,18,1,19,1,3,20,28", value: "فرشاة أسنان"),
            //Writer : Amal abughazalah , Reviewer : Tahani
            KeyValueItem(id: UUID(), key: "10", value: "نظارات طبيه"),
            KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
