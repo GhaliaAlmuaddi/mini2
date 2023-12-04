@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Winner: View {
       @State private var isButtonTapped = false
-      let results = ["عشاء الفريق الفايز اليوم عليكم", "قهوة الفريق الفايز عليكم"].shuffled()
+      let results = ["عشاء الفريق الفايز اليوم عليكم", "قهوة الفريق الفايز عليكم","الفريق الفايز يختارلكم اغنية ترقصون عليها","عقاب اختياري من الفريق الفايز","ارقصو رقصة البطريق","اوقفو على رجل واحدة لثلاث دقايق"].shuffled()
     
     
         @Binding var CounterTeamOne : Int
@@ -105,14 +105,14 @@ struct Winner: View {
                             VStack{
                                 StrokeText(text: "عقاب الخسرانين", width: 0.5, color: .customLyellow)
                                 
-                                    .padding(.bottom, 80)
-                                    .frame(width: 350, height: 50)
+                                    .padding(.bottom, 60)
+                                    .frame(width: 400, height: 50)
                                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                                 
                                 Text(results[0])
-                                    .frame(width: 350, height: 50)
+                                    .frame(width: 350, height: 80)
                                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                
+                                    .multilineTextAlignment(.center)
                             }}.foregroundColor(Color.white)
                         
                         NavigationLink{

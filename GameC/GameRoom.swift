@@ -160,7 +160,7 @@ struct GameRoom: View {
                     Button("إنهاء") {
                         showingAlert = true
                     }
-                    .alert("طفشتوا،تبغ،ن تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showingAlert) {
+                    .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showingAlert) {
                         Button("لا",role: .cancel) { }
                         Button("اي",role: .destructive) { }
                     }
