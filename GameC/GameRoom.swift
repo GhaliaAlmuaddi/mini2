@@ -125,13 +125,13 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(), key: "10", value: "مشط"),
            
            //Writer : Amal alotaibi , Reviewer : Samaa
-           KeyValueItem(id: UUID(), key: "10", value: "خلخال"),
-           KeyValueItem(id: UUID(), key: "10", value: "كمامه"),
-           KeyValueItem(id: UUID(), key: "10", value: "صابون"),
-           KeyValueItem(id: UUID(), key: "10", value: "ساعة يد"),
-           KeyValueItem(id: UUID(), key: "10", value: "ربطة"),
-           KeyValueItem(id: UUID(), key: "10", value: "سفرة"),
-           KeyValueItem(id: UUID(), key: "10", value: "جزمة"),
+           KeyValueItem(id: UUID(), key: "25 1 2 25 2", value: "خلخال"),
+           KeyValueItem(id: UUID(), key: "19 22 1 22 7", value: "كمامه"),
+           KeyValueItem(id: UUID(), key: "12 14 24 1 15", value: "صابون"),
+           KeyValueItem(id: UUID(), key: "6 21 _ 19 26 1 18", value: "ساعة يد"),
+           KeyValueItem(id: UUID(), key: "19 8 24 20", value: "ربطة"),
+           KeyValueItem(id: UUID(), key: "19 20 28 18", value: "سفرة"),
+           KeyValueItem(id: UUID(), key: "19 22 23 9", value: "جزمة"),
            
            
            //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
