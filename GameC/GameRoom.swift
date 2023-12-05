@@ -214,6 +214,7 @@ struct GameRoom: View {
                         Button("لا",role: .cancel) { }
                         Button("اي",role: .destructive) {
                             sheetShowing.toggle()
+                            SoundManger.incstance.playSound(sound: .gong)
                             Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)
                         }
                     }
@@ -382,6 +383,7 @@ struct GameRoom: View {
 //                        }
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
+                            SoundManger.incstance.playSound(sound: .gong)
                         }
                        
                        
@@ -429,6 +431,7 @@ struct GameRoom: View {
                         showGotPoint=true
                         if (CounterTeamTwo == 100){
                             sheetShowing.toggle()
+                            SoundManger.incstance.playSound(sound: .gong)
                         }
                        
                     }
