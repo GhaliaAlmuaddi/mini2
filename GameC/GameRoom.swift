@@ -100,13 +100,13 @@ struct GameRoom: View {
            
            
            //Writer : Tahani , Reviewer : Ghalia
-           KeyValueItem(id: UUID(),key: "10", value: "مرطب شفاه"),
-           KeyValueItem(id: UUID(),key: "10", value: "سماعة"),
-           KeyValueItem(id: UUID(),key: "10", value: "ملعقة"),
-           KeyValueItem(id: UUID(),key: "10", value: "شمعة"),
-           KeyValueItem(id: UUID(),key: "10", value: "تحفة"),
-           KeyValueItem(id: UUID(),key: "10", value: "فنجان"),
-           KeyValueItem(id: UUID(),key: "10", value: "مزهرية"),
+           KeyValueItem(id: UUID(),key: "19 1 28 3 _ 24 8 20 22", value: "مرطب شفاه"),
+           KeyValueItem(id: UUID(),key: "19 26 1 22 18", value: "سماعة"),
+           KeyValueItem(id: UUID(),key: "19 27 26 22", value: "ملعقة"),
+           KeyValueItem(id: UUID(),key: "19 26 22 3", value: "شمعة"),
+           KeyValueItem(id: UUID(),key: "19 28 5 13", value: "تحفة"),
+           KeyValueItem(id: UUID(),key: "12 1 9 12 28", value: "فنجان"),
+           KeyValueItem(id: UUID(),key: "19 21 20 19 23 22", value: "مزهرية"),
            
            //Writer : Samaa , Reviewer : Amal Alotaibi
            KeyValueItem(id: UUID(), key: "13 1 21 1 28 12_19 25 18", value: "سلة نفايات"),
