@@ -80,7 +80,7 @@ struct Desc2: View {
                     
                 }
             
-        }
+        }.ignoresSafeArea()
         
         
         

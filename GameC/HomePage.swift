@@ -18,6 +18,7 @@ import SwiftUI
 struct HomePage: View {
     @State var isActive: Bool = false
     @State var isActive2: Bool = false
+    @State var sheetShowing = false
     var body: some View {
         
         NavigationStack{
@@ -30,7 +31,7 @@ struct HomePage: View {
                 HStack{
                     
                     VStack{
-                        NavigationLink{ GameDescription()
+                        Button{ sheetShowing.toggle()
                             
                         }
                     label:{
@@ -64,7 +65,7 @@ struct HomePage: View {
                                 
                                 
                             }
-                            
+                            .fullScreenCover(isPresented: $sheetShowing, content:{ GameDescription(sheetShowing: $sheetShowing)})
                            
                             
                         }
@@ -162,7 +163,7 @@ struct HomePage: View {
             }}
         .navigationBarBackButtonHidden(true)
         //.accentColor(.red)
-        .padding(.bottom, -10.0)
+        //.padding(.bottom, -10.0)
         
         
         
