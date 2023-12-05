@@ -211,7 +211,10 @@ struct GameRoom: View {
                     }
                     .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showingAlert) {
                         Button("لا",role: .cancel) { }
-                        Button("اي",role: .destructive) { }
+                        Button("اي",role: .destructive) {
+                            sheetShowing.toggle()
+                            Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)
+                        }
                     }
                     .foregroundColor(CustomColor.CustomDyellow)
                     .font(.system(size: 24))
