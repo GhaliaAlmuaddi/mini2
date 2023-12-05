@@ -90,13 +90,13 @@ struct GameRoom: View {
     @State var RequestsAndOrders: [KeyValueItem] = [
         
         //Writer : Ghalia , Reviewer : Amal abughazalah
-           KeyValueItem(id: UUID(),key: "10", value: "كتاب"),
-           KeyValueItem(id: UUID(),key: "10", value: "لعبة"),
-           KeyValueItem(id: UUID(),key: "10", value: "ساعه حائط"),
-           KeyValueItem(id: UUID(),key: "10", value: "روج"),
-           KeyValueItem(id: UUID(),key: "10", value: "عطر"),
-           KeyValueItem(id: UUID(),key: "10", value: "مقص اظافر"),
-           KeyValueItem(id: UUID(),key: "10", value: "مفتاح سيارة"),
+           KeyValueItem(id: UUID(),key: "24 1 13 7", value: "كتاب"),
+           KeyValueItem(id: UUID(),key: "19 24 26 25", value: "لعبة"),
+           KeyValueItem(id: UUID(),key: "8 1 1 5 _ 19 26 1 18", value: "ساعه حائط"),
+           KeyValueItem(id: UUID(),key: "9 14 20", value: "روج"),
+           KeyValueItem(id: UUID(),key: "20 8 26", value: "عطر"),
+           KeyValueItem(id: UUID(),key: "20 28 1 16 1 _  15 27 22 ", value: "مقص اظافر"),
+           KeyValueItem(id: UUID(),key: "19 20 1 21 18 _5 1 13 22", value: "مفتاح سيارة"),
            
            
            //Writer : Tahani , Reviewer : Ghalia
@@ -109,14 +109,13 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(),key: "10", value: "مزهرية"),
            
            //Writer : Samaa , Reviewer : Amal Alotaibi
-           KeyValueItem(id: UUID(), key: "13,1,21,1,28,12,19,25,18", value: "سلة نفايات"),
-           KeyValueItem(id: UUID(), key: "19,6,1,9,18", value: "سجادة"),
-           KeyValueItem(id: UUID(), key: "19,20,21,17,15,19,21,1,20,22", value: "مراية صغيرة"),
-           KeyValueItem(id: UUID(), key: "25,21,6,1,12,22,12,14,13,20,7", value: "كرتون مناديل"),
-           KeyValueItem(id: UUID(), key: "27,25,5", value: "حلق"),
-           KeyValueItem(id: UUID(), key: "19,21,18,22,3,13,1,20,1,16,12", value: "نظارات شمسية"),
-           KeyValueItem(id: UUID(), key: "12,1,12,18,1,19,1,3,20,28", value: "فرشاة أسنان"),
-           //Writer : Amal abughazalah , Reviewer : Tahani
+           KeyValueItem(id: UUID(), key: "13 1 21 1 28 12_19 25 18", value: "سلة نفايات"),
+           KeyValueItem(id: UUID(), key: "19 6 1 9 18", value: "سجادة"),
+           KeyValueItem(id: UUID(), key: "19 20 21 17 15 _ 19 21 1 20 22", value: "مراية صغيرة"),
+           KeyValueItem(id: UUID(), key: "25 21 6 1 12 22 _ 12 14 13 20 7", value: "كرتون مناديل"),
+           KeyValueItem(id: UUID(), key: "27 25 5", value: "حلق"),
+           KeyValueItem(id: UUID(), key: "19 21 18 22 3_ 13 1 20 1 16 12", value: "نظارات شمسية"),
+           KeyValueItem(id: UUID(), key: "12 1 12 18 1 _ 19 1 3 20 28", value: "فرشاة أسنان"),        //Writer : Amal abughazalah , Reviewer : Tahani
            KeyValueItem(id: UUID(), key: "10", value: "نظارات طبيه"),
            KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
            KeyValueItem(id: UUID(), key: "10", value: "خمسه ريال"),
