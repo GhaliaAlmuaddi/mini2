@@ -270,7 +270,7 @@ struct GameRoom: View {
                     VStack{
                         Text("سارع بفك الشفرة وتنفيذ الطلب")
                             .foregroundColor(.white)
-                            .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
                             .fontWeight(.regular)
                             .multilineTextAlignment(.trailing)
                       
@@ -284,7 +284,7 @@ struct GameRoom: View {
                             //.font(.system(family: "Helvetica"))
                             Capsule()
                                 .fill(.white.opacity(0.08))
-                                .frame(width: 290,height: 60)
+                                .frame(width: 350,height: 60)
                         }
                         
                     }
