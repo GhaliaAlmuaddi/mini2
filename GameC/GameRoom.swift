@@ -115,14 +115,16 @@ struct GameRoom: View {
            KeyValueItem(id: UUID(), key: "25 21 6 1 12 22 _ 12 14 13 20 7", value: "كرتون مناديل"),
            KeyValueItem(id: UUID(), key: "27 25 5", value: "حلق"),
            KeyValueItem(id: UUID(), key: "19 21 18 22 3_ 13 1 20 1 16 12", value: "نظارات شمسية"),
-           KeyValueItem(id: UUID(), key: "12 1 12 18 1 _ 19 1 3 20 28", value: "فرشاة أسنان"),        //Writer : Amal abughazalah , Reviewer : Tahani
-           KeyValueItem(id: UUID(), key: "10", value: "نظارات طبيه"),
-           KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
-           KeyValueItem(id: UUID(), key: "10", value: "خمسه ريال"),
-           KeyValueItem(id: UUID(), key: "10", value: "قلم رصاص"),
-           KeyValueItem(id: UUID(), key: "10", value: "قميص"),
-           KeyValueItem(id: UUID(), key: "10", value: "محفظة"),
-           KeyValueItem(id: UUID(), key: "10", value: "مشط"),
+           KeyValueItem(id: UUID(), key: "12 1 12 18 1 _ 19 1 3 20 28", value: "فرشاة أسنان"),
+           
+           //Writer : Amal abughazalah , Reviewer : Tahani
+           KeyValueItem(id: UUID(), key: "19 21 24 8 _ 13 1 20 1 16 12", value: "نظارات طبيه"),
+           KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
+           KeyValueItem(id: UUID(), key: "25 1 21 20 _ 19 18 22 2", value: "خمسه ريال"),
+           KeyValueItem(id: UUID(), key: "15 1 15 20 _ 22 25 27", value: "قلم رصاص"),
+           KeyValueItem(id: UUID(), key: "15 21 22 27", value: "قميص"),
+           KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
+           KeyValueItem(id: UUID(), key: "8 3 22", value: "مشط"),
            
            //Writer : Amal alotaibi , Reviewer : Samaa
            KeyValueItem(id: UUID(), key: "25 1 2 25 2", value: "خلخال"),
