@@ -352,10 +352,13 @@ struct GameRoom: View {
                         //                        if (lightweightObjects.count == 9){
                         //                            print("yay")
                         
-                        DispatchQueue.main.async {
-                                                      let generator = UINotificationFeedbackGenerator()
-                                                       generator.notificationOccurred(.success)
-                                                  }
+                        let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
+                        impactGenerator.impactOccurred()
+                        
+//                        DispatchQueue.main.async {
+//                                                      let generator = UINotificationFeedbackGenerator()
+//                                                       generator.notificationOccurred(.success)
+//                                                  }
                         //                        }
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
@@ -401,7 +404,7 @@ struct GameRoom: View {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                            
                             
-                            UIImpactFeedbackGenerator(style: .medium)
+//                            UIImpactFeedbackGenerator(style: .medium)
                     
                            // feedback.notificationOccurred(.success)
                             
@@ -412,6 +415,9 @@ struct GameRoom: View {
                         Button {
                             
                             //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
+                            
+                            let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
+                            impactGenerator.impactOccurred()
                             ScoreFun(Current_Counter: &CounterTeamTwo)
                             
                             
