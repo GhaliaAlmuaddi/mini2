@@ -98,7 +98,7 @@ struct HomePage: View {
                                     
                                         .offset(x: 30, y: 40)
                                     //.rotationEffect(.degrees(5))
-                                    Image("Ninja_with_stick")
+                                    Image("ninja_with_stick")
                                         .resizable()
                                         .frame(width:200, height: 240
                                         )
@@ -124,10 +124,11 @@ struct HomePage: View {
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 13)
-                                .frame(width: 330, height: 843)
+                                .frame(width: 330, height: 840)
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading)
                                 )
+                                .padding(.top)
                             
                             VStack{
                                 Text("يلا نلعب!")
@@ -141,14 +142,14 @@ struct HomePage: View {
                                     .resizable()
                                     .frame(width:270, height: 340
                                     )
-                                    .offset(x: 10.0, y: 200)
+                                    .offset(x: 10.0, y: 207)
                                 // .rotationEffect(.degrees(5))
                                 
                             }  .padding(.bottom, -10.0)
                         }.ignoresSafeArea()
                     }
                 }.ignoresSafeArea()
-                
+                    
                 if isActive {
                     CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
                         // print("Pass to viewModel")

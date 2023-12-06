@@ -106,8 +106,8 @@ struct GameRoom: View {
         //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
         ///لسى ماتوزعت نبغى نكملها
         ///عطر
-        KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
-        KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
+       // KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
+       // KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
         
         
     ]
@@ -245,7 +245,7 @@ struct GameRoom: View {
                     Spacer()
                     
                     VStack{
-                        Text("🏃🏻‍♂️ فك الشفرة ونفذ او جيب الطلب باسرع ماعندك🏃🏻‍♂️")
+                        Text(" فك الشفرة ونفذ او جيب الطلب باسرع ماعندك")
                             .foregroundColor(.white)
                             .font(.title3)
                             .fontWeight(.regular)
@@ -379,11 +379,11 @@ struct GameRoom: View {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 220, height: 220) .cornerRadius(13)
-                            Image("finished1")
+                            Image("done")
                                 .resizable()
-                                .frame(width: 230, height:150)
+                                .frame(width: 150, height:100)
                                 .cornerRadius(13)
-                                .offset(x:15)
+                                .offset(x:80, y:-20)
                             
                             
                             VStack{
@@ -392,17 +392,17 @@ struct GameRoom: View {
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.trailing)
-                                Image("Ninja_with_stick")
+                                Image("ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
-                                    .offset(y:15)
+                                    .offset(x:-30,y:15)
                                     .fullScreenCover(isPresented:$sheetShowing){
                                         Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
                             }
                             
                         }
                         
-                    }    .alert(" كفو لفريق \(team1Name) \n \n هل كل الفريقين مستعدين للتنافس بالشفرة الجايه ؟😎", isPresented: $showingAlert1) {
+                    }    .alert(" كفو لفريق \(team1Name) \n \n  مستعدين للتنافس بالشفرة الجايه ؟", isPresented: $showingAlert1) {
                         Button("اكييد! كمل 💪",role: .cancel) {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                            
@@ -468,13 +468,13 @@ struct GameRoom: View {
                                 Image("NINJA_SMILE")
                                     .resizable()
                                     .frame(width: 145,height: 145)
-                                    .offset(y:15)
+                                    .offset(y:16)
                                     .fullScreenCover(isPresented:$sheetShowing){
                                         Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
                             }
                             
                         }   }
-                    .alert(" كفو لفريق \(team2Name) \n \n هل كل الفريقين مستعدين للتنافس بالشفرة الجايه ؟😎", isPresented: $showingAlert2) {
+                    .alert(" كفو لفريق \(team2Name) \n \n  مستعدين للتنافس بالشفرة الجايه ؟", isPresented: $showingAlert2) {
                         
                         
                         Button("اكييد! كمل 💪",role: .cancel) {
