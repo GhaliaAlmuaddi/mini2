@@ -354,7 +354,6 @@ struct GameRoom: View {
                         
                         let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
                         impactGenerator.impactOccurred()
-                        
 //                        DispatchQueue.main.async {
 //                                                      let generator = UINotificationFeedbackGenerator()
 //                                                       generator.notificationOccurred(.success)
@@ -418,6 +417,7 @@ struct GameRoom: View {
                             
                             let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
                             impactGenerator.impactOccurred()
+                            
                             ScoreFun(Current_Counter: &CounterTeamTwo)
                             
                             
