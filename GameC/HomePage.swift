@@ -98,7 +98,7 @@ struct HomePage: View {
                                     
                                         .offset(x: 30, y: 40)
                                     //.rotationEffect(.degrees(5))
-                                    Image("ninja_with_stick")
+                                    Image("Ninja_with_stick")
                                         .resizable()
                                         .frame(width:200, height: 240
                                         )

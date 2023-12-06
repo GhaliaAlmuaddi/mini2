@@ -386,7 +386,7 @@ struct GameRoom: View {
                                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.trailing)
-                                Image("ninja_with_stick")
+                                Image("Ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
                                     .offset(y:15)
