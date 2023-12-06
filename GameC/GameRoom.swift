@@ -352,14 +352,15 @@ struct GameRoom: View {
                         //                        if (lightweightObjects.count == 9){
                         //                            print("yay")
                         
-                        let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
-                        impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
+//                        let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
+//                        impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
 
 //                        DispatchQueue.main.async {
 //                                                      let generator = UINotificationFeedbackGenerator()
 //                                                       generator.notificationOccurred(.success)
 //                                                  }
                         //                        }
+                        //yay
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
                             SoundManger.incstance.playSound(sound: .gong)
@@ -416,8 +417,8 @@ struct GameRoom: View {
                             
                             //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             
-                            let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
-                            impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
+//                            let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
+//                            impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
 
                             
                             ScoreFun(Current_Counter: &CounterTeamTwo)
