@@ -396,8 +396,7 @@ struct GameRoom: View {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                            
                             
-                           let generator = UINotificationFeedbackGenerator()
-                            generator.notificationOccurred(.success)
+                            UIImpactFeedbackGenerator(style: .medium)
                     
                            // feedback.notificationOccurred(.success)
                             
@@ -458,13 +457,17 @@ struct GameRoom: View {
                         Button("اكييد! كمل 💪",role: .cancel) {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             
-                            DispatchQueue.main.async {
-                                let generator = UINotificationFeedbackGenerator()
-                                generator.notificationOccurred(.success)
-                            }
+//                            DispatchQueue.main.async {
+//                                let generator = UINotificationFeedbackGenerator()
+//                                generator.notificationOccurred(.success)
+//                            }
+                            
+                            UIImpactFeedbackGenerator(style: .medium)
+                            
                             //ScoreFun(Current_Counter: &CounterTeamTwo)
                             
                         }
+                        
                     }
                         
                         
