@@ -453,11 +453,15 @@ struct GameRoom: View {
                             
                         }   }
                     .alert(" كفو لفريق \(team2Name) \n \n هل كل الفريقين مستعدين للتنافس بالشفرة الجايه ؟😎", isPresented: $showingAlert2) {
+                        
+                        
                         Button("اكييد! كمل 💪",role: .cancel) {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             
-                            let generator = UINotificationFeedbackGenerator()
-                             generator.notificationOccurred(.success)
+                            DispatchQueue.main.async {
+                                let generator = UINotificationFeedbackGenerator()
+                                generator.notificationOccurred(.success)
+                            }
                             //ScoreFun(Current_Counter: &CounterTeamTwo)
                             
                         }
