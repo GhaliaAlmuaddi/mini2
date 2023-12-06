@@ -352,8 +352,9 @@ struct GameRoom: View {
                         //                        if (lightweightObjects.count == 9){
                         //                            print("yay")
                         
-                        let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
-                        impactGenerator.impactOccurred()
+                        let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
+                        impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
+
 //                        DispatchQueue.main.async {
 //                                                      let generator = UINotificationFeedbackGenerator()
 //                                                       generator.notificationOccurred(.success)
@@ -415,8 +416,9 @@ struct GameRoom: View {
                             
                             //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             
-                            let impactGenerator = UIImpactFeedbackGenerator(style: .medium)
-                            impactGenerator.impactOccurred()
+                            let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
+                            impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
+
                             
                             ScoreFun(Current_Counter: &CounterTeamTwo)
                             
@@ -424,11 +426,11 @@ struct GameRoom: View {
                             
                             SoundManger.incstance.playSound(sound: .hit)
                             
-                            DispatchQueue.main.async {
-                                                          let generator = UINotificationFeedbackGenerator()
-                                                           generator.notificationOccurred(.success)
-                                                      }
-                            
+//                            DispatchQueue.main.async {
+//                                                          let generator = UINotificationFeedbackGenerator()
+//                                                           generator.notificationOccurred(.success)
+//                                                      }
+//                            
                           //  showGotPoint=true
                             if (CounterTeamTwo == 100){
                                 sheetShowing.toggle()
