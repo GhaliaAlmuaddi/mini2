@@ -7,7 +7,7 @@
 
 import SwiftUI
 import AVKit
-import UIKit
+//import UIKit
 //import AVFoundation
 
 //Sound MangerSound class for audios
@@ -105,6 +105,7 @@ struct GameRoom: View {
         
         //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
         ///لسى ماتوزعت نبغى نكملها
+        ///عطر
         KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
         KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
         
@@ -156,12 +157,12 @@ struct GameRoom: View {
     ]
     
     
-    @State var Current_Q  = " "
+    @State var Current_Q  = ""
     
     
     var body: some View {
         
-        
+       
         
         ZStack {
             //BACKGROUND START...
@@ -251,8 +252,9 @@ struct GameRoom: View {
                             .multilineTextAlignment(.trailing)
                         
                         ZStack{
-                             
+                            
                             Text(Current_Q)
+                            
                                 .foregroundColor(.white)
                                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                 .fontWeight(.semibold)
@@ -506,7 +508,11 @@ struct GameRoom: View {
                     
                     
                 }// END OF VSTACK
+            
             }
+        .onAppear{
+            Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
+        }
             
         }
     }
