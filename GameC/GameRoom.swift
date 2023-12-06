@@ -351,6 +351,11 @@ struct GameRoom: View {
                         SoundManger.incstance.playSound(sound: .hit)
                         //                        if (lightweightObjects.count == 9){
                         //                            print("yay")
+                        
+                        DispatchQueue.main.async {
+                                                      let generator = UINotificationFeedbackGenerator()
+                                                       generator.notificationOccurred(.success)
+                                                  }
                         //                        }
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
@@ -409,7 +414,14 @@ struct GameRoom: View {
                             //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             ScoreFun(Current_Counter: &CounterTeamTwo)
                             
+                            
+                            
                             SoundManger.incstance.playSound(sound: .hit)
+                            
+                            DispatchQueue.main.async {
+                                                          let generator = UINotificationFeedbackGenerator()
+                                                           generator.notificationOccurred(.success)
+                                                      }
                             
                           //  showGotPoint=true
                             if (CounterTeamTwo == 100){
@@ -462,7 +474,7 @@ struct GameRoom: View {
 //                                generator.notificationOccurred(.success)
 //                            }
                             
-                            UIImpactFeedbackGenerator(style: .medium)
+                           
                             
                             //ScoreFun(Current_Counter: &CounterTeamTwo)
                             
