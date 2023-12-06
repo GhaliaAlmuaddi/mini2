@@ -16,9 +16,11 @@ import SwiftUI
 
 
 struct HomePage: View {
+    
     @State var isActive: Bool = false
     @State var isActive2: Bool = false
     @State var sheetShowing = false
+    
     var body: some View {
         
         NavigationStack{
@@ -154,7 +156,7 @@ struct HomePage: View {
                 }
                 
                 if isActive2 {
-                    JoiningTeamDialogue(isActive: $isActive2, title: "بنضم الى لعبة", buttonTitle: "انضمام") {
+                    JoiningTeamDialogue( isActive: $isActive2, title: "بنضم الى لعبة", buttonTitle: "ارسل طلب للاجهزة الي حولك") {
                         // print("Pass to viewModel")
                     }
                 }

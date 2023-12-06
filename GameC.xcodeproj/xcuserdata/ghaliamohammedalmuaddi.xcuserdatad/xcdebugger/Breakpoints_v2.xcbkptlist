@@ -30,8 +30,8 @@
             filePath = "GameC/GameRoom.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -64,6 +64,51 @@
                   startingLineNumber = "149"
                   endingLineNumber = "149"
                   offsetFromSymbolStart = "2640">
+               </Location>
+               <Location
+                  uuid = "369E97EB-DFBA-4B38-AE00-3E5E79379E08 - 3a6e48758d9a8698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in GameC.GameRoom.body.getter : some"
+                  moduleName = "GameC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghaliamohammedalmuaddi/Desktop/GameC/GameC/GameRoom.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "964">
+               </Location>
+               <Location
+                  uuid = "369E97EB-DFBA-4B38-AE00-3E5E79379E08 - 3a6e48758d9a8698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in GameC.GameRoom.body.getter : some"
+                  moduleName = "GameC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghaliamohammedalmuaddi/Desktop/GameC/GameC/GameRoom.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "932">
+               </Location>
+               <Location
+                  uuid = "369E97EB-DFBA-4B38-AE00-3E5E79379E08 - 3a6e48758d9a8698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in GameC.GameRoom.body.getter : some"
+                  moduleName = "GameC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghaliamohammedalmuaddi/Desktop/GameC/GameC/GameRoom.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "960">
                </Location>
             </Locations>
          </BreakpointContent>

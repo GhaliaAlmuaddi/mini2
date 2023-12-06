@@ -187,7 +187,7 @@ struct AnotherPageView: View {
 //}
 
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
         Winner(CounterTeamOne: .constant(0),CounterTeamTwo: .constant(0), team1Name: .constant("Team 1"), team2Name: .constant("Team 2"))
     }

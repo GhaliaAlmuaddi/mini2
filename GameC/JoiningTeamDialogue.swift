@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct JoiningTeamDialogue: View {
+  //  @ObservedObject var conn4VM: ConnnectFourViewModel
     @Binding var isActive: Bool
 let title: String
 //let message: String
@@ -33,7 +34,7 @@ var body: some View {
                 close()
             }
             Rectangle()
-            .fill(.white.opacity(0.6)).frame(width: 470, height:350).cornerRadius(13)
+            .fill(.white.opacity(0.6)).frame(width: 470, height:300).cornerRadius(13)
             .blur(radius:0.5)
         
 
@@ -44,25 +45,27 @@ var body: some View {
                 .padding(30)
 
            // VStack {
-            TextField("", text: $JoiningID , prompt: Text("كود الانضمام")
-                .foregroundColor(.white)
-                    ).frame(width:352.53,height: 83).overlay(
-                RoundedRectangle(cornerRadius: 13)
-                    .stroke(Color.white, lineWidth: 2)
-            )
-                .multilineTextAlignment(.center)
+//            TextField("", text: $JoiningID , prompt: Text("كود الانضمام")
+//                .foregroundColor(.white)
+//                    ).frame(width:352.53,height: 83).overlay(
+//                RoundedRectangle(cornerRadius: 13)
+//                    .stroke(Color.white, lineWidth: 2)
+//            )
+//                .multilineTextAlignment(.center)
             
 
             Button {
                 action()
-                close()
+                //close()
+                //conn4VM.advertise()
+                
             } label: {
                 ZStack {
                    
 
                         
                     
-                    LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 286, height:71).cornerRadius(41)
+                    LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 400, height:71).cornerRadius(41)
 //                        RoundedRectangle(cornerRadius: 41)
 //                                .foregroundColor(.yellow)
 
@@ -87,7 +90,7 @@ var body: some View {
                     .foregroundColor(.white)
             }
             //.tint(.black)
-            .padding()
+            .padding(50)
         }
         .shadow(radius: 20)
         .padding(30)
@@ -114,5 +117,6 @@ func close() {
 struct CustomDialog_Previews2: PreviewProvider {
     static var previews: some View {
         JoiningTeamDialogue(isActive: .constant(true), title: "", buttonTitle: "", action: {})
+        
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import UIKit
 //import AVFoundation
 
 //Sound MangerSound class for audios
@@ -40,7 +41,9 @@ class SoundManger {
 }
 
 struct GameRoom: View {
-    @State private var showingAlert = false
+   // @ObservedObject var conn4VM: ConnnectFourViewModel
+    @State private var showingAlert1 = false
+    @State private var showingAlert2 = false
     @State private var showCode = false
     @State private var showGotPoint = false
     @State  var CounterTeamOne = 0
@@ -49,102 +52,66 @@ struct GameRoom: View {
     
     @State private var navigationActive: Bool = false
     
-//    @State var ٍٍRequestsAndOrders: [Objects] = [
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "كتاب"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "لعبة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "ساعه حائط"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "روج"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "عطر"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "مقص اظافر"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "مفتاح سيارة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "مرطب شفاه"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "سماعة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "ملعقة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String : "شمعة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String : "تحفة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "تحفة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "فنجان"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "مزهرية"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "سلة نفايات"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "سجادة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "مراية صغيرة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "سلة نفايات"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "كرتون مناديل"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "حلق"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "نظارات شمسية"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "نظارات طبيه"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "محفظة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "خمسه ريال"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "قلم رصاص"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "قميص"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "محفظة"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String:"مشط"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "خلخال"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "كمامه"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "صابون"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "ساعة يد"),
-//        Objects(Encrypted_String: "10", AfterDecoded_String: "ربطة"),
-//
-//       ]
+    
     
     @State var RequestsAndOrders: [KeyValueItem] = [
         
         //Writer : Ghalia , Reviewer : Amal abughazalah
-           KeyValueItem(id: UUID(),key: "24 1 13 7", value: "كتاب"),
-           KeyValueItem(id: UUID(),key: "19 24 26 25", value: "لعبة"),
-           KeyValueItem(id: UUID(),key: "8 1 1 5 _ 19 26 1 18", value: "ساعه حائط"),
-           KeyValueItem(id: UUID(),key: "9 14 20", value: "روج"),
-           KeyValueItem(id: UUID(),key: "20 8 26", value: "عطر"),
-           KeyValueItem(id: UUID(),key: "20 28 1 16 1 _  15 27 22 ", value: "مقص اظافر"),
-           KeyValueItem(id: UUID(),key: "19 20 1 21 18 _5 1 13 22", value: "مفتاح سيارة"),
-           
-           
-           //Writer : Tahani , Reviewer : Ghalia
-           KeyValueItem(id: UUID(),key: "19 1 28 3 _ 24 8 20 22", value: "مرطب شفاه"),
-           KeyValueItem(id: UUID(),key: "19 26 1 22 18", value: "سماعة"),
-           KeyValueItem(id: UUID(),key: "19 27 26 22", value: "ملعقة"),
-           KeyValueItem(id: UUID(),key: "19 26 22 3", value: "شمعة"),
-           KeyValueItem(id: UUID(),key: "19 28 5 13", value: "تحفة"),
-           KeyValueItem(id: UUID(),key: "12 1 9 12 28", value: "فنجان"),
-           KeyValueItem(id: UUID(),key: "19 21 20 19 23 22", value: "مزهرية"),
-           
-           //Writer : Samaa , Reviewer : Amal Alotaibi
-           KeyValueItem(id: UUID(), key: "13 1 21 1 28 12_19 25 18", value: "سلة نفايات"),
-           KeyValueItem(id: UUID(), key: "19 6 1 9 18", value: "سجادة"),
-           KeyValueItem(id: UUID(), key: "19 20 21 17 15 _ 19 21 1 20 22", value: "مراية صغيرة"),
-           KeyValueItem(id: UUID(), key: "25 21 6 1 12 22 _ 12 14 13 20 7", value: "كرتون مناديل"),
-           KeyValueItem(id: UUID(), key: "27 25 5", value: "حلق"),
-           KeyValueItem(id: UUID(), key: "19 21 18 22 3_ 13 1 20 1 16 12", value: "نظارات شمسية"),
-           KeyValueItem(id: UUID(), key: "12 1 12 18 1 _ 19 1 3 20 28", value: "فرشاة أسنان"),
-           
-           //Writer : Amal abughazalah , Reviewer : Tahani
-           KeyValueItem(id: UUID(), key: "19 21 24 8 _ 13 1 20 1 16 12", value: "نظارات طبيه"),
-           KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
-           KeyValueItem(id: UUID(), key: "25 1 21 20 _ 19 18 22 2", value: "خمسه ريال"),
-           KeyValueItem(id: UUID(), key: "15 1 15 20 _ 22 25 27", value: "قلم رصاص"),
-           KeyValueItem(id: UUID(), key: "15 21 22 27", value: "قميص"),
-           KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
-           KeyValueItem(id: UUID(), key: "8 3 22", value: "مشط"),
-           
-           //Writer : Amal alotaibi , Reviewer : Samaa
-           KeyValueItem(id: UUID(), key: "25 1 2 25 2", value: "خلخال"),
-           KeyValueItem(id: UUID(), key: "19 22 1 22 7", value: "كمامه"),
-           KeyValueItem(id: UUID(), key: "12 14 24 1 15", value: "صابون"),
-           KeyValueItem(id: UUID(), key: "6 21 _ 19 26 1 18", value: "ساعة يد"),
-           KeyValueItem(id: UUID(), key: "19 8 24 20", value: "ربطة"),
-           KeyValueItem(id: UUID(), key: "19 20 28 18", value: "سفرة"),
-           KeyValueItem(id: UUID(), key: "19 22 23 9", value: "جزمة"),
-           
-           
-           //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
-           ///لسى ماتوزعت نبغى نكملها
-           KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
-           KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
-           
-
-       ]
+        KeyValueItem(id: UUID(),key: "24 1 13 7", value: "كتاب"),
+        KeyValueItem(id: UUID(),key: "19 24 26 25", value: "لعبة"),
+        KeyValueItem(id: UUID(),key: "8 1 1 5 _ 19 26 1 18", value: "ساعه حائط"),
+        KeyValueItem(id: UUID(),key: "9 14 20", value: "روج"),
+        KeyValueItem(id: UUID(),key: "20 8 26", value: "عطر"),
+        KeyValueItem(id: UUID(),key: "20 28 1 16 1 _  15 27 22", value: "مقص اظافر"),
+        KeyValueItem(id: UUID(),key: "19 20 1 21 18 _5 1 13 22", value: "مفتاح سيارة"),
+        
+        
+        //Writer : Tahani , Reviewer : Ghalia
+        KeyValueItem(id: UUID(),key: "19 1 28 3 _ 24 8 20 22", value: "مرطب شفاه"),
+        KeyValueItem(id: UUID(),key: "19 26 1 22 18", value: "سماعة"),
+        KeyValueItem(id: UUID(),key: "19 27 26 22", value: "ملعقة"),
+        KeyValueItem(id: UUID(),key: "19 26 22 3", value: "شمعة"),
+        KeyValueItem(id: UUID(),key: "19 28 5 13", value: "تحفة"),
+        KeyValueItem(id: UUID(),key: "12 1 9 12 28", value: "فنجان"),
+        KeyValueItem(id: UUID(),key: "19 21 20 19 23 22", value: "مزهرية"),
+        
+        //Writer : Samaa , Reviewer : Amal Alotaibi
+        KeyValueItem(id: UUID(), key: "13 1 21 1 28 12_19 25 18", value: "سلة نفايات"),
+        KeyValueItem(id: UUID(), key: "19 6 1 9 18", value: "سجادة"),
+        KeyValueItem(id: UUID(), key: "19 20 21 17 15 _ 19 21 1 20 22", value: "مراية صغيرة"),
+        KeyValueItem(id: UUID(), key: "25 21 6 1 12 22 _ 12 14 13 20 7", value: "كرتون مناديل"),
+        KeyValueItem(id: UUID(), key: "27 25 5", value: "حلق"),
+        KeyValueItem(id: UUID(), key: "19 21 18 22 3_ 13 1 20 1 16 12", value: "نظارات شمسية"),
+        KeyValueItem(id: UUID(), key: "12 1 12 18 1 _ 19 1 3 20 28", value: "فرشاة أسنان"),
+        
+        //Writer : Amal abughazalah , Reviewer : Tahani
+        KeyValueItem(id: UUID(), key: "19 21 24 8 _ 13 1 20 1 16 12", value: "نظارات طبيه"),
+        KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
+        KeyValueItem(id: UUID(), key: "25 1 21 20 _ 19 18 22 2", value: "خمسه ريال"),
+        KeyValueItem(id: UUID(), key: "15 1 15 20 _ 22 25 27", value: "قلم رصاص"),
+        KeyValueItem(id: UUID(), key: "15 21 22 27", value: "قميص"),
+        KeyValueItem(id: UUID(), key: "19 16 28 5 22", value: "محفظة"),
+        KeyValueItem(id: UUID(), key: "8 3 22", value: "مشط"),
+        
+        //Writer : Amal alotaibi , Reviewer : Samaa
+        KeyValueItem(id: UUID(), key: "25 1 2 25 2", value: "خلخال"),
+        KeyValueItem(id: UUID(), key: "19 22 1 22 7", value: "كمامه"),
+        KeyValueItem(id: UUID(), key: "12 14 24 1 15", value: "صابون"),
+        KeyValueItem(id: UUID(), key: "6 21 _ 19 26 1 18", value: "ساعة يد"),
+        KeyValueItem(id: UUID(), key: "19 8 24 20", value: "ربطة"),
+        KeyValueItem(id: UUID(), key: "19 20 28 18", value: "سفرة"),
+        KeyValueItem(id: UUID(), key: "19 22 23 9", value: "جزمة"),
+        
+        
+        //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
+        ///لسى ماتوزعت نبغى نكملها
+        KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
+        KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
+        
+        
+    ]
     
-
+    
     @State var UniqueSet  = Set <KeyValueItem> ()
     
     
@@ -189,14 +156,16 @@ struct GameRoom: View {
     ]
     
     
-    @State var Current_Q  = ""
+    @State var Current_Q  = " "
     
     
     var body: some View {
-
-      
+        
+        
+        
         ZStack {
             //BACKGROUND START...
+            // Text("")
             AngularGradient(
                 gradient: Gradient(colors: [ CustomColor.CustomDpurple,CustomColor.CustomLpurple]), center: .topLeading,
                 startAngle: .zero,
@@ -208,9 +177,9 @@ struct GameRoom: View {
             VStack{
                 HStack{
                     Button("إنهاء") {
-                        showingAlert = true
+                        showGotPoint = true
                     }
-                    .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showingAlert) {
+                    .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showGotPoint) {
                         Button("لا",role: .cancel) { }
                         Button("اي",role: .destructive) {
                             sheetShowing.toggle()
@@ -227,13 +196,15 @@ struct GameRoom: View {
                     
                     Button("دعوة") {
                         showCode = true
-                    }
-                    .alert("رمز الدعوة:", isPresented: $showCode) {
-                        Button("نسخ",role: .cancel) { }
-                    } message: {
-                        Text("CBC1414")
+                      //  conn4VM.invite()
                         
                     }
+                   .alert("رمز الدعوة:", isPresented: $showCode) {
+                       Button("نسخ",role: .cancel) { }
+                   } message: {
+                        Text("CBC1414")
+//                        
+                  }
                     .foregroundColor(CustomColor.CustomDyellow)
                     .font(.system(size: 24))
                     .padding(10)
@@ -273,14 +244,14 @@ struct GameRoom: View {
                     Spacer()
                     
                     VStack{
-                        Text("سارع بفك الشفرة وتنفيذ الطلب")
+                        Text("🏃🏻‍♂️ فك الشفرة ونفذ او جيب الطلب باسرع ماعندك🏃🏻‍♂️")
                             .foregroundColor(.white)
-                            .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
+                            .font(.title3)
                             .fontWeight(.regular)
                             .multilineTextAlignment(.trailing)
-                      
-                        ZStack{
                         
+                        ZStack{
+                             
                             Text(Current_Q)
                                 .foregroundColor(.white)
                                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
@@ -331,8 +302,8 @@ struct GameRoom: View {
                 
                 LazyVGrid(columns: clumns, spacing: 8) {
                     ForEach(keyValueItems.shuffled()) { item in
-                       
-                       
+                        
+                        
                         ZStack{
                             
                             Rectangle()
@@ -373,20 +344,23 @@ struct GameRoom: View {
                     
                     Button {
                         
-                        Current_Q = uniqueShaffled(Array1: &RequestsAndOrders , UniqueSet1: &UniqueSet)
+                        //                        Current_Q = uniqueShaffled(Array1: &RequestsAndOrders , UniqueSet1: &UniqueSet)
                         
                         ScoreFun(Current_Counter: &CounterTeamOne)
                         
                         SoundManger.incstance.playSound(sound: .hit)
-//                        if (lightweightObjects.count == 9){
-//                            print("yay")
-//                        }
+                        //                        if (lightweightObjects.count == 9){
+                        //                            print("yay")
+                        //                        }
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
                             SoundManger.incstance.playSound(sound: .gong)
                         }
-                       
-                       
+                        else {
+                            showingAlert1 = true
+                        }
+                        
+                        
                         
                     } label: {
                         ZStack{
@@ -395,11 +369,11 @@ struct GameRoom: View {
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 220, height: 220) .cornerRadius(13)
                             Image("finished1")
-                            .resizable()
-                            .frame(width: 230, height:150)
-                            .cornerRadius(13)
-                            .offset(x:15)
-                           
+                                .resizable()
+                                .frame(width: 230, height:150)
+                                .cornerRadius(13)
+                                .offset(x:15)
+                            
                             
                             VStack{
                                 Text("\(team1Name)")
@@ -413,99 +387,119 @@ struct GameRoom: View {
                                     .offset(y:15)
                                     .fullScreenCover(isPresented:$sheetShowing){
                                         Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
-                                    }
-                                
                             }
-                        
+                            
                         }
                         
-                    Spacer()
+                    }    .alert(" كفو لفريق \(team1Name) \n \n هل كل الفريقين مستعدين للتنافس بالشفرة الجايه ؟😎", isPresented: $showingAlert1) {
+                        Button("اكييد! كمل 💪",role: .cancel) {
+                            Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
+                           
+                            
+                           let generator = UINotificationFeedbackGenerator()
+                            generator.notificationOccurred(.success)
                     
-                    Button {
+                           // feedback.notificationOccurred(.success)
+                            
+                        } }
                         
-                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
-                        ScoreFun(Current_Counter: &CounterTeamTwo)
+                        Spacer()
                         
-                        SoundManger.incstance.playSound(sound: .hit)
-                        
-                        showGotPoint=true
-                        if (CounterTeamTwo == 100){
-                            sheetShowing.toggle()
-                            SoundManger.incstance.playSound(sound: .gong)
+                        Button {
+                            
+                            //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
+                            ScoreFun(Current_Counter: &CounterTeamTwo)
+                            
+                            SoundManger.incstance.playSound(sound: .hit)
+                            
+                          //  showGotPoint=true
+                            if (CounterTeamTwo == 100){
+                                sheetShowing.toggle()
+                                SoundManger.incstance.playSound(sound: .gong)
+                            }
+                            else {
+                                showingAlert2 = true
+                            }
+                            
                         }
-                       
-                    }
-                    
-                    
-                    
-                label: {
-                    
-                    ZStack{
-                        Rectangle()
-                            .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
-                            .frame(width: 220, height: 220) .cornerRadius(13)
-                        Image("finished1")
-                        .resizable()
-                        .frame(width: 230, height:150)
-                        .cornerRadius(13)
-                        .offset(x:15)
-                       
-                        VStack{
-                            Text("\(team2Name)")
-                                .foregroundColor(.white)
-                                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.trailing)
-                            Image("NINJA_SMILE")
+                        
+                        
+                        
+                    label: {
+                        
+                        ZStack{
+                            Rectangle()
+                                .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
+                                .frame(width: 220, height: 220) .cornerRadius(13)
+                            Image("finished1")
                                 .resizable()
-                                .frame(width: 145,height: 145)
-                                .offset(y:15)
-                                .fullScreenCover(isPresented:$sheetShowing){
-                                    Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
+                                .frame(width: 230, height:150)
+                                .cornerRadius(13)
+                                .offset(x:15)
+                            
+                            VStack{
+                                Text("\(team2Name)")
+                                    .foregroundColor(.white)
+                                    .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                    .fontWeight(.semibold)
+                                    .multilineTextAlignment(.trailing)
+                                Image("NINJA_SMILE")
+                                    .resizable()
+                                    .frame(width: 145,height: 145)
+                                    .offset(y:15)
+                                    .fullScreenCover(isPresented:$sheetShowing){
+                                        Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
+                            }
+                            
+                        }   }
+                    .alert(" كفو لفريق \(team2Name) \n \n هل كل الفريقين مستعدين للتنافس بالشفرة الجايه ؟😎", isPresented: $showingAlert2) {
+                        Button("اكييد! كمل 💪",role: .cancel) {
+                            Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
+                            
+                            let generator = UINotificationFeedbackGenerator()
+                             generator.notificationOccurred(.success)
+                            //ScoreFun(Current_Counter: &CounterTeamTwo)
+                            
                         }
+                    }
                         
-                    }   }
-//                .alert("كفو والله!!", isPresented: $showGotPoint) {
-//                    Button("كمل 💪",role: .cancel) { }
-//                }
+                        
+                        
+                        
+                    }.padding(30)
+                    //HSTACK FOR THE BTN COUNTER END ...
                     
                     
                     
                     
-                }.padding(30)
-                //HSTACK FOR THE BTN COUNTER END ...
-                
-                
-                
-             
-                    .navigationBarBackButtonHidden(true)
-                
-                
-                
-                
-            }// END OF VSTACK
-        }
-        
-    }
-    
-    func uniqueShaffled(Array1: inout [KeyValueItem],UniqueSet1 : inout Set<KeyValueItem>)-> String {
-        
-        while true {
-            Array1 = Array1.shuffled()
-            
-            for i in Array1 {
-                if !UniqueSet1.contains(i) {
-                    UniqueSet1.insert(i)
-                    return i.key
-                }
+                        .navigationBarBackButtonHidden(true)
+                    
+                    
+                    
+                    
+                }// END OF VSTACK
             }
             
-            UniqueSet1.removeAll()
+        }
+    }
+        func uniqueShaffled(Array1: inout [KeyValueItem],UniqueSet1 : inout Set<KeyValueItem>)-> String {
+            
+            while true {
+                Array1 = Array1.shuffled()
+                
+                for i in Array1 {
+                    if !UniqueSet1.contains(i) {
+                        UniqueSet1.insert(i)
+                        return i.key
+                    }
+                }
+                
+                UniqueSet1.removeAll()
+                
+            }
+            
             
         }
-        
-        
-    }}
 
 
 func ScoreFun ( Current_Counter: inout Int){
@@ -522,10 +516,7 @@ func ScoreFun ( Current_Counter: inout Int){
         let value: String
     }
 
-struct Objects {
-    let Encrypted_String: String
-    let AfterDecoded_String: String
-}
+
 
     
     

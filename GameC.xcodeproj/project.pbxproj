@@ -19,8 +19,6 @@
 		29B524D42B1DB46D008F1480 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29B524D32B1DB46D008F1480 /* hit.mp3 */; };
 		3A7840E42B1874D000A1CCCC /* VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7840E32B1874D000A1CCCC /* VS.swift */; };
 		903E652B2B14F745000ED931 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E652A2B14F745000ED931 /* HomePage.swift */; };
-		9042385C2B1B924D00AB8228 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042385B2B1B924D00AB8228 /* GameModel.swift */; };
-		905D892C2B1C761B00F24DD2 /* ScoreDialogue .swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D892B2B1C761B00F24DD2 /* ScoreDialogue .swift */; };
 		90DA0A532B10DBE700C97E85 /* GameCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA0A522B10DBE700C97E85 /* GameCApp.swift */; };
 		90DA0A552B10DBE700C97E85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA0A542B10DBE700C97E85 /* ContentView.swift */; };
 		90DA0A572B10DBE800C97E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DA0A562B10DBE800C97E85 /* Assets.xcassets */; };
@@ -42,8 +40,6 @@
 		29B524D32B1DB46D008F1480 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		3A7840E32B1874D000A1CCCC /* VS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VS.swift; sourceTree = "<group>"; };
 		903E652A2B14F745000ED931 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
-		9042385B2B1B924D00AB8228 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		905D892B2B1C761B00F24DD2 /* ScoreDialogue .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreDialogue .swift"; sourceTree = "<group>"; };
 		90DA0A4F2B10DBE700C97E85 /* GameC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DA0A522B10DBE700C97E85 /* GameCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCApp.swift; sourceTree = "<group>"; };
 		90DA0A542B10DBE700C97E85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,11 +102,9 @@
 				04C1E56A2B171D3700DDF277 /* Winner.swift */,
 				29570B482B15D57F00DFCF2E /* Desc3.swift */,
 				90EA71452B17CDE90009DE99 /* JoiningTeamDialogue.swift */,
-				9042385B2B1B924D00AB8228 /* GameModel.swift */,
 				90DA0A562B10DBE800C97E85 /* Assets.xcassets */,
 				22A5C6312B1D159200BCA611 /* Sounds */,
 				90DA0A582B10DBE800C97E85 /* Preview Content */,
-				905D892B2B1C761B00F24DD2 /* ScoreDialogue .swift */,
 			);
 			path = GameC;
 			sourceTree = "<group>";
@@ -209,8 +203,6 @@
 				3A7840E42B1874D000A1CCCC /* VS.swift in Sources */,
 				90EA71462B17CDE90009DE99 /* JoiningTeamDialogue.swift in Sources */,
 				903E652B2B14F745000ED931 /* HomePage.swift in Sources */,
-				905D892C2B1C761B00F24DD2 /* ScoreDialogue .swift in Sources */,
-				9042385C2B1B924D00AB8228 /* GameModel.swift in Sources */,
 				29570B472B15D56E00DFCF2E /* Desc2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameC/Preview Content\"";
-				DEVELOPMENT_TEAM = 4N7H9NTACZ;
+				DEVELOPMENT_TEAM = 2S786LTF49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -374,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameC/Preview Content\"";
-				DEVELOPMENT_TEAM = 4N7H9NTACZ;
+				DEVELOPMENT_TEAM = 2S786LTF49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
