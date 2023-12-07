@@ -106,8 +106,8 @@ struct GameRoom: View {
         //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
         ///لسى ماتوزعت نبغى نكملها
         ///عطر
-       // KeyValueItem(id: UUID(), key: "10", value: "ارقصو"),
-       // KeyValueItem(id: UUID(), key: "10", value: "تشقلبو"),
+      KeyValueItem(id: UUID(), key: "1 20 27 15 14", value: "ارقصو"),
+        KeyValueItem(id: UUID(), key: "13 3 27 25 24 14", value: "تشقلبو"),
         
         
     ]
@@ -379,11 +379,11 @@ struct GameRoom: View {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 220, height: 220) .cornerRadius(13)
-                            Image("done")
+                            Image("finished1")
                                 .resizable()
-                                .frame(width: 150, height:100)
+                                .frame(width: 230, height:150)
                                 .cornerRadius(13)
-                                .offset(x:80, y:-20)
+                                .offset(x:15)
                             
                             
                             VStack{
@@ -395,7 +395,7 @@ struct GameRoom: View {
                                 Image("ninja_with_stick")
                                     .resizable()
                                     .frame(width: 150,height: 150)
-                                    .offset(x:-30,y:15)
+                                    .offset(y:15)
                                     .fullScreenCover(isPresented:$sheetShowing){
                                         Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)}
                             }
