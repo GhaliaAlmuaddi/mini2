@@ -41,7 +41,7 @@ struct VS: View {
                                 )
                                 .offset(x: 90, y: 13)
                             
-                            Image("ninja_with_stick")
+                            Image("Ninja_with_stick")
                                 .resizable()
                                 .frame(width:200, height: 230
                                 )
