@@ -32,37 +32,37 @@ struct HomePage: View {
                 
                 HStack{
                     
-                    VStack{
+                   
                         Button{ sheetShowing.toggle()
                             
                         }
                     label:{
                         ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 13)
-                            
-                                .padding()
-                            // .rotationEffect(.degrees(5))
-                            
-                                .frame(width: 330, height:420)
+                            Rectangle()
+                            .trim(from: 0 , to: 0.6)
+                            .rotationEffect(.degrees(-180))
+                        
+                            .frame(width: 500, height: 800)
+                        
+                            .cornerRadius(13)
                             
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
-                            
+                                .padding(.trailing, -250)
                             VStack{
                                 Text("وش السالفة؟")
                                     .foregroundColor(Color.white)
                                     .multilineTextAlignment(.trailing)
-                                    .font(.system(size: 35))
+                                    .font(.system(size: 52))
                                 
-                                    .offset(x: 40, y: 40)
+                                    .offset(x: 50, y: 60)
                                 //.rotationEffect(.degrees(5))
                                 Image("ninja?")
                                 
                                     .resizable()
-                                    .frame(width:200, height: 300
+                                    .frame(width:270, height: 340
                                     )
-                                    .offset(x: -50, y: 13)
+                                    .offset(x: 10, y:183)
                                 //.rotationEffect(.degrees(5))
                                 
                                 
@@ -72,83 +72,45 @@ struct HomePage: View {
                             
                         }
                         
-                        .padding(.bottom, 0)
-                        .padding(.trailing,5)
+                   //    .padding()
+                     
+                        
                     }
-                        Button {
-                            isActive2 = true
-                        } label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 13)
-                                
-                                //.rotationEffect(.degrees(5))
-                                    .frame(width: 300, height:420)
-                                
-                                    .foregroundStyle(
-                                        LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading))
-                                
-                                
-                                VStack{
-                                    
-                                    
-                                    Text("بنضم الى لعبة")
-                                        .foregroundColor(Color.white)
-                                        .multilineTextAlignment(.trailing)
-                                        .font(.system(size: 35))
-                                    
-                                        .offset(x: 30, y: 40)
-                                    //.rotationEffect(.degrees(5))
-                                    Image("Ninja_with_stick")
-                                        .resizable()
-                                        .frame(width:200, height: 240
-                                        )
-                                        .offset(x: -50.0, y: 60)
-                                    // .rotationEffect(.degrees(5))
-                                    
-                                    
-                                    
-                                }
-                                
-                            } //here
-                           .padding([.trailing], 2)
-                            
-                          
-                        }
-                    }
-                  
-                  
-                    
-                    
+                       
                     Button {
                         isActive = true
                     } label: {
                         ZStack {
-                            RoundedRectangle(cornerRadius: 13)
-                                .frame(width: 330, height: 840)
+                            Rectangle()
+                                .trim(from: 0 , to: 0.6)
+                                .frame(width: 500, height: 800)
+                                .cornerRadius(13)
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading)
                                 )
-                                .padding(.top)
-                            
+                               
+                              
                             VStack{
                                 Text("يلا نلعب!")
                                     .foregroundColor(Color.white)
                                     .multilineTextAlignment(.trailing)
                                     .font(.system(size: 52))
-                                    .offset(x: 10, y: 105)
+                                    .offset(x: 50, y: 60)
                                 
                                 
                                 Image("NINJA_SMILE")
                                     .resizable()
                                     .frame(width:270, height: 340
                                     )
-                                    .offset(x: 10.0, y: 207)
+                                    .offset(x: 115.0, y: 185)
                                 // .rotationEffect(.degrees(5))
                                 
-                            }  .padding(.bottom, -10.0)
-                        }.ignoresSafeArea()
+                            }
+                            
+                        }
+                          
                     }
-                }.ignoresSafeArea()
+                }
                     
                 if isActive {
                     CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
