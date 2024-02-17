@@ -102,11 +102,7 @@ struct GameRoom: View {
         KeyValueItem(id: UUID(), key: "19 20 28 18", value: "سفرة"),
         KeyValueItem(id: UUID(), key: "19 22 23 9", value: "جزمة"),
         
-        
-        //التحديات ناقصة، بليز لو في بالكم شي ضيفوه
-        ///لسى ماتوزعت نبغى نكملها
-        ///عطر
-      KeyValueItem(id: UUID(), key: "1 20 27 15 14", value: "ارقصو"),
+         KeyValueItem(id: UUID(), key: "1 20 27 15 14", value: "ارقصو"),
         KeyValueItem(id: UUID(), key: "13 3 27 25 24 14", value: "تشقلبو"),
         
         
@@ -161,8 +157,8 @@ struct GameRoom: View {
     
     
     var body: some View {
-        
-       
+      
+
         
         ZStack {
             //BACKGROUND START...
@@ -195,20 +191,20 @@ struct GameRoom: View {
                     
                     Spacer()
                     
-                    Button("دعوة") {
-                        showCode = true
-                      //  conn4VM.invite()
-                        
-                    }
-                   .alert("رمز الدعوة:", isPresented: $showCode) {
-                       Button("نسخ",role: .cancel) { }
-                   } message: {
-                        Text("CBC1414")
+//                    Button("دعوة") {
+//                        showCode = true
+//                      //  conn4VM.invite()
 //                        
-                  }
-                    .foregroundColor(CustomColor.CustomDyellow)
-                    .font(.system(size: 24))
-                    .padding(10)
+//                    }
+//                   .alert("رمز الدعوة:", isPresented: $showCode) {
+//                       Button("نسخ",role: .cancel) { }
+//                   } message: {
+//                        Text("CBC1414")
+////                        
+//                  }
+//                    .foregroundColor(CustomColor.CustomDyellow)
+//                    .font(.system(size: 24))
+//                    .padding(10)
                     
                     
                 }.padding(30)//END OF HSTACK FOR THE BTNS
@@ -245,7 +241,7 @@ struct GameRoom: View {
                     Spacer()
                     
                     VStack{
-                        Text(" فك الشفرة ونفذ او جيب الطلب باسرع ماعندك")
+                        Text(" فك الشفرة ونفذ او جيب الطلب باسرع ماعندك").frame(width: 500)
                             .foregroundColor(.white)
                             .font(.title3)
                             .fontWeight(.regular)
@@ -351,18 +347,7 @@ struct GameRoom: View {
                         ScoreFun(Current_Counter: &CounterTeamOne)
                         
                         SoundManger.incstance.playSound(sound: .hit)
-                        //                        if (lightweightObjects.count == 9){
-                        //                            print("yay")
-                        
-//                        let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
-//                        impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
-
-//                        DispatchQueue.main.async {
-//                                                      let generator = UINotificationFeedbackGenerator()
-//                                                       generator.notificationOccurred(.success)
-//                                                  }
-                        //                        }
-                        //yay
+     
                         if (CounterTeamOne == 100){
                             sheetShowing.toggle()
                             SoundManger.incstance.playSound(sound: .gong)
@@ -407,9 +392,6 @@ struct GameRoom: View {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                            
                             
-//                            UIImpactFeedbackGenerator(style: .medium)
-                    
-                           // feedback.notificationOccurred(.success)
                             
                         } }
                         
@@ -417,24 +399,14 @@ struct GameRoom: View {
                         
                         Button {
                             
-                            //                        Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
-                            
-//                            let impactGenerator = UIImpactFeedbackGenerator(style: .heavy) // Choose the style that fits your needs
-//                            impactGenerator.impactOccurred(intensity: 1.0) // Adjust intensity as needed (0.0 to 1.0)
-
-                            
+     
                             ScoreFun(Current_Counter: &CounterTeamTwo)
                             
                             
                             
                             SoundManger.incstance.playSound(sound: .hit)
                             
-//                            DispatchQueue.main.async {
-//                                                          let generator = UINotificationFeedbackGenerator()
-//                                                           generator.notificationOccurred(.success)
-//                                                      }
-//                            
-                          //  showGotPoint=true
+
                             if (CounterTeamTwo == 100){
                                 sheetShowing.toggle()
                                 SoundManger.incstance.playSound(sound: .gong)
@@ -480,14 +452,7 @@ struct GameRoom: View {
                         Button("اكييد! كمل 💪",role: .cancel) {
                             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
                             
-//                            DispatchQueue.main.async {
-//                                let generator = UINotificationFeedbackGenerator()
-//                                generator.notificationOccurred(.success)
-//                            }
-                            
-                           
-                            
-                            //ScoreFun(Current_Counter: &CounterTeamTwo)
+
                             
                         }
                         
@@ -509,7 +474,8 @@ struct GameRoom: View {
                     
                 }// END OF VSTACK
             
-            }
+        }.ignoresSafeArea()
+          
         .onAppear{
             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)
         }

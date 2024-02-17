@@ -22,14 +22,14 @@ struct Desc2: View {
                 .opacity(0.3)
                 .ignoresSafeArea()
            
-                VStack(alignment: .trailing) {
+            VStack(alignment: .trailing , spacing: 20) {
                     
-                    Text(" وش السالفة؟  🤔")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.trailing)
-                        .padding(50.0)
+//                    Text(" وش السالفة؟  🤔")
+//                        .font(.largeTitle)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color.white)
+//                        .multilineTextAlignment(.trailing)
+//                        .padding(50.0)
                     Text("اللعبة بتعرض لكم شفرة، يبدا كل فريق منكم يحاول يفك الشفرة و تنفيذ هذا الطلب.")
 
                         .font(.title)
@@ -37,7 +37,7 @@ struct Desc2: View {
                         .multilineTextAlignment(.trailing)
                         .padding([.top, .leading, .trailing], 50.0)
                         .padding(.bottom , -10)
-                    Text("اللعبة بتعرض لكم على سبيل المثال عندنا هذي الشفرة:")
+                    Text(" على سبيل المثال عندنا هذي الشفرة:")
 
                         .font(.title)
                         .foregroundColor(Color.white)
@@ -65,7 +65,7 @@ struct Desc2: View {
                         .padding(.horizontal, 50)
                         .frame(width: 800, height:400)
                     
-                    Text("تشوفون كل رقم ايش الحرف المقابل له.")
+                    Text(" تشوفون كل رقم ايش الحرف المقابل له.\n ملاحظة : قراءة الشفرة من اليمين لليسار")
                         .font(.title2)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.trailing)
@@ -76,9 +76,9 @@ struct Desc2: View {
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         .padding([.top, .leading], 50.0)
-                        .padding(.trailing, 170)
+                        .padding(.trailing, 170).padding(.bottom,80)
                     
-                }
+                }.padding(.top,140)
             
         }.ignoresSafeArea()
         

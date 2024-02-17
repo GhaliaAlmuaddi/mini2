@@ -23,24 +23,25 @@ struct Desc3: View {
                 .opacity(0.3)
                 .ignoresSafeArea()
            
-                VStack(alignment: .trailing) {
+            VStack(alignment: .trailing , spacing: 40) {
                     
-                    Text(" وش السالفة؟  🤔")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.trailing)
-                        .padding(.trailing, 50)
-                        .padding(.top, 150.0)
+//                    Text(" وش السالفة؟  🤔")
+//                        .font(.largeTitle)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color.white)
+//                        .multilineTextAlignment(.trailing)
+//                        .padding(.trailing, 50)
+//                        .padding(.top, 150.0)
+               
                     
-                    Text("بالبداية ضروري أسرع فريق يفك الشفرة و يجيب مفتاح يضغط على اسم التيم حقه عشان تحسب له نقطه👏")
+                    Text(" أسرع فريق يفك الشفرة و يجيب مفتاح /nيضغط على اسم التيم حقه عشان تحسب له نقطه👏")
 
                         .font(.title)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.trailing)
                         .padding([.top, .leading, .trailing], 50.0)
                         .padding(.bottom , -10)
-                    Text("شوفو عددكم اذا قليلوخليكم مركزين و انتو تضغطون في حال ضغطتو على فريق الخصم مشكلتكم!    و راح تروح لهم النقطه 🤫")
+                    Text("خليكم مركزين و انتو تضغطون في حال ضغطتو على فريق الخصم مشكلتكم!  و راح تروح لهم النقطه 🤫")
 
                         .font(.title)
                         .foregroundColor(Color.white)
@@ -55,7 +56,7 @@ struct Desc3: View {
                         .padding([.top, .leading, .trailing], 50.0)
                         .padding(.bottom , -10)
                    Spacer()
-                }
+            }.padding(.top,190)
             
         }
         

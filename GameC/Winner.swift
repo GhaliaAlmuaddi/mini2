@@ -29,7 +29,7 @@ struct Winner: View {
                 )
                 .ignoresSafeArea()
                 //                            Text("النتائج")
-                //                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                //                            .font(.title)
                 //                            .foregroundColor(Color.white)
                 //                            .offset(x:0, y: -500)
                 GroupBox {
@@ -43,9 +43,9 @@ struct Winner: View {
                                 .font(.system(size: 72))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
-                                .frame(width: 400.0, height: 200.0)
+                                .frame(width: 400.0, height: 200.0).padding()
                             
-                                .offset(x:0, y: -20)
+                            // .offset(x:0, y: -20)
                             
                             Text("النتيجة \(CounterTeamOne)")
                                 .foregroundColor(Color.white)
@@ -58,14 +58,15 @@ struct Winner: View {
                                 .offset(x:0, y: -50)
                         } else{
                             StrokeText(text: "\(team2Name)", width: 1.5, color: .customLyellow)
-                            //Text("الفريق الاول")
+                            
                             
                                 .font(.system(size: 72))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
                                 .frame(width: 400.0, height: 200.0)
+                                .padding(.top,-20)
                             
-                                .offset(x:0, y: -20)
+                            // .offset(x:0, y: -20)
                             
                             Text("النتيجة \(CounterTeamTwo)")
                                 .foregroundColor(Color.white)
@@ -74,33 +75,14 @@ struct Winner: View {
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                                 .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
                             
-                                .cornerRadius(40)
-                                .offset(x:0, y: -50)
+                                .cornerRadius(40).padding(.top,-50)
+                            // .offset(x:0, y: -50)
                             
                         }
                         
-                        //                                  Text("الفريق الاول")
-                        //
-                        //                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        //                                        .fontWeight(.bold)
-                        //                                        .foregroundColor(Color.white)
-                        //                                        .frame(width: 400.0, height: 200.0)
-                        //
-                        //                                        .offset(x:0, y: -37)
-                        //
-                        //                                  Text("النتيجة ٦٠/١٠٠")
-                        //                                        .foregroundColor(Color.white)
-                        //                                        .padding()
-                        //                                        .frame(width: 310, height: 50)
-                        //                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        //                                        .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
-                        //
-                        //                                        .cornerRadius(40)
-                        //                                        .offset(x:0, y: -50)
                         
-                        // Spacer()
                         ZStack{ RoundedRectangle(cornerRadius: 40)
-                                .frame(width: 400)
+                                .frame(width: 400, height: 250)
                                 .foregroundColor(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
                             
                             VStack{
@@ -123,7 +105,7 @@ struct Winner: View {
                         Text("تم")
                             .padding()
                             .frame(width: 230, height: 80)
-                            .font(.title)
+                            .font(.title).bold()
                             .background(
                                 LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topLeading, endPoint: .bottomTrailing)
                             )
@@ -131,40 +113,41 @@ struct Winner: View {
                             .cornerRadius(35)
                             .frame(width: 550, height: 100.0)
                     }
-                    .sheet(isPresented: $isButtonTapped) {
-                        // Present the next view/page here
-                        AnotherPageView()
-                    }
+                        //                    .sheet(isPresented: $isButtonTapped) {
+                        //                        // Present the next view/page here
+                        //                        AnotherPageView()
+                        //                    }
                     }
                     
                     .frame(width: 433, height: 616)
                 }
                 
                 .backgroundStyle(Color(red: 0.576, green: 0.592, blue: 0.592, opacity: 0.315))
-                Image("win1")
-                    .resizable()
-                    .frame(width:600, height:140)
-                    .position(CGPoint(x: 400, y: 242))
-                Text("الفائز")
-                    .foregroundColor(Color.white)
-                    .fontWeight(.bold)
-                    .position(CGPoint(x: 400, y: 229))
-                    .font(.system(size: 46))
-                Image("star1")
-                    .resizable()
-                    .frame(width:99, height:100)
-                    .position(CGPoint(x: 400, y: 150))
-                Image("star1")
-                    .resizable()
-                    .frame(width:60, height:60)
-                    .position(CGPoint(x: 300, y: 176))
-                Image("star1")
-                    .resizable()
-                    .frame(width:60, height:60)
-                    .position(CGPoint(x: 500, y: 176))
-                
-                Image("linee")
-                    .position(CGPoint(x: 400, y: 500))
+                ZStack {
+                    Image("win1")
+                        .resizable()
+                        .frame(width:600, height:140)
+                    //.position(CGPoint(x: 400, y: 242))
+                    Text("الفائز")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold).padding(.bottom,20)
+                    // .position(CGPoint(x: 400, y: 229))
+                        .font(.system(size: 46))
+                                        Image("star1")
+                                            .resizable()
+                                            .frame(width:60, height:60).padding(.bottom,200).padding(.leading,200)
+                                           // .position(CGPoint(x: 400, y: 150))
+                                        Image("star1")
+                                            .resizable()
+                                            .frame(width:99, height:100).padding(.bottom,200)
+//                                            .position(CGPoint(x: 300, y: 176))
+                                        Image("star1")
+                                            .resizable()
+                                            .frame(width:60, height:60).padding(.bottom,200).padding(.trailing,200)
+                                           // .position(CGPoint(x: 500, y: 176))
+                    
+                    
+                }.padding(.bottom,600)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -173,12 +156,12 @@ struct Winner: View {
 }
 
 
-struct AnotherPageView: View {
-    var body: some View {
-        Text("This is another page")
-            .font(.title)
-    }
-}
+//struct AnotherPageView: View {
+//    var body: some View {
+//        Text("This is another page")
+//            .font(.title)
+//    }
+//}
 
 // CUSTOM COLORS END...
 
@@ -197,17 +180,18 @@ struct StrokeText: View {
     let text: String
     let width: CGFloat
     let color: Color
-
+    
     var body: some View {
         ZStack{
-            ZStack{
-                Text(text).offset(x:  width, y:  width)
-                Text(text).offset(x: -width, y: -width)
-                Text(text).offset(x: -width, y:  width)
-                Text(text).offset(x:  width, y: -width)
-            }
-            .foregroundColor(color)
-            Text(text)
+                        ZStack{
+                            Text(text).offset(x:  width, y:  width)
+                            Text(text).offset(x: -width, y: -width)
+                            Text(text).offset(x: -width, y:  width)
+                            Text(text).offset(x:  width, y: -width)
+                        }
+                        .foregroundColor(color)
+                        Text(text)
+                    }
         }
     }
-}
+

@@ -96,29 +96,29 @@ struct VS: View {
                         }
                     }
                         
-                    NavigationLink{ GameRoom( team1Name: $team1Name, team2Name: $team2Name)}
+//                    NavigationLink{ GameRoom( team1Name: $team1Name, team2Name: $team2Name)}
 
                     
                     
-                label: {
-                    ZStack {
-                       // RoundedRectangle(cornerRadius: 41)
-                           // .stroke(.blue, lineWidth: 4)
-                       //.padding()
-                       //.foregroundColor(Color.white.opacity(0.0))
-                      
-                      // .border(Color.customDyellow, width: 4)
-                       //.cornerRadius(41)
-                        RoundedRectangle(cornerRadius: 41)
-                            .stroke(Color.customLyellow, lineWidth: 2)
-                            .frame(width: 320, height:60)
-                        
-                        Text("مشاركة كود الانضمام")
-                            .font(.system(size: 22, weight: .bold))
-                            .foregroundColor(.white)
-                         
-                    }
-                }
+//                label: {
+//                    ZStack {
+//                       // RoundedRectangle(cornerRadius: 41)
+//                           // .stroke(.blue, lineWidth: 4)
+//                       //.padding()
+//                       //.foregroundColor(Color.white.opacity(0.0))
+//                      
+//                      // .border(Color.customDyellow, width: 4)
+//                       //.cornerRadius(41)
+//                        RoundedRectangle(cornerRadius: 41)
+//                            .stroke(Color.customLyellow, lineWidth: 2)
+//                            .frame(width: 320, height:60)
+//                        
+//                        Text("مشاركة كود الانضمام")
+//                            .font(.system(size: 22, weight: .bold))
+//                            .foregroundColor(.white)
+//                         
+//                    }
+//                }
                         
                         
                         
