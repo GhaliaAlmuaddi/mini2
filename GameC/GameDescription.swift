@@ -28,7 +28,12 @@ struct GameDescription: View {
                 //.toolbar {
                     .tabViewStyle(.page)
                 // 2
-                
+                VStack {
+                           
+                            
+                            HStack {
+                                Spacer()
+                                
                 Button {
                     // 3
                     sheetShowing.toggle()
@@ -45,11 +50,13 @@ struct GameDescription: View {
                         .foregroundColor(.white)
                     
                     
+                }  }
+                    Spacer()
+                      
                     
-                    //    }
-                    
-                }.padding(.leading,650).padding(.bottom,1000)    //.offset(x: 350, y: -500)
-                
+                }
+                .padding()
+             
             }
             //.toolbarBackground(.hidden, for: .navigationBar)
             //.tabViewStyle(PageTabViewStyle())
