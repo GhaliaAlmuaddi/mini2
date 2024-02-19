@@ -39,13 +39,7 @@ struct Desc1: View {
                         .multilineTextAlignment(.trailing)
                         .padding([.top, .leading, .trailing], 50.0)
                         .padding(.bottom , -10)
-//                    Text("شوفو عددكم اذا قليل يمديكم تلعبون بجهاز واحد. و اذا كنتم اكثر من ٤ اشخاص ننصحكم تدخلون على نفس التحدي من جهاز ثاني عن طريق مشاركه كود الانضمام للعبة بين الجهازين .")
-//
-//                        .font(.title)
-//                        .foregroundColor(Color.white)
-//                        .multilineTextAlignment(.trailing)
-//                        .padding([.top, .leading, .trailing], 50.0)
-//                        .padding(.bottom , -10)
+
                     Text(" بتبدأ اللعبة بعرض رقم شفرة، لازم التركيز يكون عندكم عالي!\n خليكم مصحصحين و شاربين قهوة و ضروري يكون عندكم\n لياقة للحركة 😎")
 
                         .font(.title)
@@ -61,8 +55,8 @@ struct Desc1: View {
                         .padding([.top, .leading, .trailing], 50.0)
                         .padding(.bottom , -10)
                     Spacer()
-                }.padding(.top,140)
-            
+                }
+                .padding(.top,140)
         }
         
         

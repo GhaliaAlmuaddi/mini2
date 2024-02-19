@@ -25,16 +25,9 @@ struct Desc3: View {
            
             VStack(alignment: .trailing , spacing: 40) {
                     
-//                    Text(" وش السالفة؟  🤔")
-//                        .font(.largeTitle)
-//                        .fontWeight(.bold)
-//                        .foregroundColor(Color.white)
-//                        .multilineTextAlignment(.trailing)
-//                        .padding(.trailing, 50)
-//                        .padding(.top, 150.0)
-               
+
                     
-                    Text(" أسرع فريق يفك الشفرة و يجيب مفتاح /nيضغط على اسم التيم حقه عشان تحسب له نقطه👏")
+                    Text(" أسرع فريق يفك الشفرة و يجيب مفتاح يضغط على اسم التيم حقه عشان تحسب  له نقطه👏")
 
                         .font(.title)
                         .foregroundColor(Color.white)

@@ -342,7 +342,7 @@ struct GameRoom: View {
                     
                     Button {
                         
-                        //                        Current_Q = uniqueShaffled(Array1: &RequestsAndOrders , UniqueSet1: &UniqueSet)
+                     
                         
                         ScoreFun(Current_Counter: &CounterTeamOne)
                         
@@ -364,7 +364,7 @@ struct GameRoom: View {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 220, height: 220) .cornerRadius(13)
-                                .shadow(color: .black, radius: 5, x: 0, y: 5)
+                                .shadow(color: .black, radius: 3, x: 0, y: 3)
                             Image("finished1")
                                 .resizable()
                                 .frame(width: 230, height:150)
@@ -426,7 +426,7 @@ struct GameRoom: View {
                             Rectangle()
                                 .fill(LinearGradient(gradient: Gradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow]), startPoint: .top, endPoint: .bottom))
                                 .frame(width: 220, height: 220) .cornerRadius(13)
-                                .shadow(color: .black, radius: 5, x: 0, y: 5)
+                                .shadow(color: .black, radius: 3, x: 0, y: 3)
                             Image("finished1")
                                 .resizable()
                                 .frame(width: 230, height:150)
@@ -474,9 +474,11 @@ struct GameRoom: View {
                     
                     
                     
-                }// END OF VSTACK
+            }.ignoresSafeArea()// END OF VSTACK
             
-        }.ignoresSafeArea()
+        }
+        
+        //.ignoresSafeArea()
           
         .onAppear{
             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)

@@ -23,9 +23,7 @@ struct GameDescription: View {
                     Desc2()
                     Desc3()
                 } .ignoresSafeArea()
-                //.toolbarBackground(.hidden, for: .navigationBar)
-                // .navigationBarBackButtonHidden(true)
-                //.toolbar {
+              
                     .tabViewStyle(.page)
                 // 2
                 VStack {
@@ -46,8 +44,7 @@ struct GameDescription: View {
                         .resizable().scaledToFit()
                         .frame(width: 40, height: 40)
                         .font(.caption)
-                    
-                        .foregroundColor(.white)
+                        .foregroundColor(.white).shadow(color: .black, radius: 3, x: 0, y: 3)
                     
                     
                 }  }

@@ -86,14 +86,14 @@ struct VS: View {
                     label: {
                         ZStack {
                             
-                            LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 400, height:80).cornerRadius(41)
+                            LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 400, height:80).cornerRadius(41).shadow(color: .black, radius: 3, x: 0, y: 3)
                             
                             
                             Text("ابدا")
                                 .font(.system(size: 32, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(30)
-                        } .shadow(color: .black, radius: 5, x: 0, y: 5)
+                        } /*.shadow(color: .black, radius: 5, x: 0, y: 5)*/
                     }
                         
 //                    NavigationLink{ GameRoom( team1Name: $team1Name, team2Name: $team2Name)}

@@ -46,7 +46,7 @@ struct HomePage: View {
                                 )
                                 .shadow(radius: 30)
                                 .rotationEffect(.degrees(180))
-                                .shadow(color: .black, radius: 5, x: 0, y: 5)
+                                .shadow(color: .black, radius: 3, x: 0, y: 3)
                                 
                             HStack{
                                 Text("يلا نلعب!")
@@ -84,7 +84,7 @@ struct HomePage: View {
                         
                             .foregroundStyle(
                                 LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
-                            .shadow(color: .black, radius: 5, x: 0, y: 5)
+                            .shadow(color: .black, radius: 3, x: 0, y: 3)
                            
                         HStack{
                             Text("وش السالفة؟")

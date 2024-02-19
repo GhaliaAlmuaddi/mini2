@@ -112,7 +112,7 @@ struct Winner: View {
                             .foregroundColor(.white)
                             .cornerRadius(41)
                             .frame(width: 550, height: 100.0)
-                    } .shadow(color: .black, radius: 5, x: 0, y: 5)
+                    } .shadow(color: .black, radius: 3, x: 0, y: 3)
                         //                    .sheet(isPresented: $isButtonTapped) {
                         //                        // Present the next view/page here
                         //                        AnotherPageView()

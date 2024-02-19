@@ -73,7 +73,7 @@ import SwiftUI
 
                                 
                             
-                            LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 286, height:71).cornerRadius(41)
+                            LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 286, height:71).cornerRadius(41).shadow(color: .black, radius: 3, x: 0, y: 3)
 //                        RoundedRectangle(cornerRadius: 41)
 //                                .foregroundColor(.yellow)
 
@@ -95,12 +95,12 @@ import SwiftUI
                         Image(systemName: "xmark")
                             .font(.title2)
                             .fontWeight(.medium)
-                            .foregroundColor(.white)
+                            .foregroundColor(.white).shadow(color: .black, radius: 3, x: 0, y: 3)
                     }
                     //.tint(.black)
                     .padding()
                 }
-                .shadow(color: .black, radius: 5, x: 0, y: 5)
+                
                 .padding(30)
               
             }.ignoresSafeArea().padding(-40) //here

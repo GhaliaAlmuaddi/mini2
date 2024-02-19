@@ -11,7 +11,6 @@
 		22331CDA2B1D9DCA00910264 /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22331CD92B1D9DCA00910264 /* punch.mp3 */; };
 		223975BC2B15CDAA009D9275 /* GameRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223975BB2B15CDA9009D9275 /* GameRoom.swift */; };
 		22A5C6352B1D15BC00BCA611 /* gong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A5C6342B1D15BC00BCA611 /* gong.mp3 */; };
-		22CED7CB2B1C6F2200BC71B0 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 22CED7CA2B1C6F2200BC71B0 /* Localizable.xcstrings */; };
 		29570B432B15D54A00DFCF2E /* GameDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B422B15D54A00DFCF2E /* GameDescription.swift */; };
 		29570B452B15D55D00DFCF2E /* Desc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B442B15D55D00DFCF2E /* Desc1.swift */; };
 		29570B472B15D56E00DFCF2E /* Desc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29570B462B15D56E00DFCF2E /* Desc2.swift */; };
@@ -30,7 +29,6 @@
 		22331CD92B1D9DCA00910264 /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
 		223975BB2B15CDA9009D9275 /* GameRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoom.swift; sourceTree = "<group>"; };
 		22A5C6342B1D15BC00BCA611 /* gong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gong.mp3; sourceTree = "<group>"; };
-		22CED7CA2B1C6F2200BC71B0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		29570B422B15D54A00DFCF2E /* GameDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDescription.swift; sourceTree = "<group>"; };
 		29570B442B15D55D00DFCF2E /* Desc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc1.swift; sourceTree = "<group>"; };
 		29570B462B15D56E00DFCF2E /* Desc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc2.swift; sourceTree = "<group>"; };
@@ -38,7 +36,7 @@
 		29B524D32B1DB46D008F1480 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		3A7840E32B1874D000A1CCCC /* VS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VS.swift; sourceTree = "<group>"; };
 		903E652A2B14F745000ED931 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
-		90DA0A4F2B10DBE700C97E85 /* GameC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90DA0A4F2B10DBE700C97E85 /* Sabig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sabig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DA0A522B10DBE700C97E85 /* GameCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCApp.swift; sourceTree = "<group>"; };
 		90DA0A562B10DBE800C97E85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90DA0A592B10DBE800C97E85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 		90DA0A462B10DBE700C97E85 = {
 			isa = PBXGroup;
 			children = (
-				22CED7CA2B1C6F2200BC71B0 /* Localizable.xcstrings */,
 				90DA0A512B10DBE700C97E85 /* GameC */,
 				90DA0A502B10DBE700C97E85 /* Products */,
 			);
@@ -78,7 +75,7 @@
 		90DA0A502B10DBE700C97E85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90DA0A4F2B10DBE700C97E85 /* GameC.app */,
+				90DA0A4F2B10DBE700C97E85 /* Sabig.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90DA0A4E2B10DBE700C97E85 /* GameC */ = {
+		90DA0A4E2B10DBE700C97E85 /* Sabig */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90DA0A5D2B10DBE800C97E85 /* Build configuration list for PBXNativeTarget "GameC" */;
+			buildConfigurationList = 90DA0A5D2B10DBE800C97E85 /* Build configuration list for PBXNativeTarget "Sabig" */;
 			buildPhases = (
 				90DA0A4B2B10DBE700C97E85 /* Sources */,
 				90DA0A4C2B10DBE700C97E85 /* Frameworks */,
@@ -126,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = GameC;
+			name = Sabig;
 			productName = GameC;
-			productReference = 90DA0A4F2B10DBE700C97E85 /* GameC.app */;
+			productReference = 90DA0A4F2B10DBE700C97E85 /* Sabig.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 90DA0A4A2B10DBE700C97E85 /* Build configuration list for PBXProject "GameC" */;
+			buildConfigurationList = 90DA0A4A2B10DBE700C97E85 /* Build configuration list for PBXProject "Sabig" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90DA0A4E2B10DBE700C97E85 /* GameC */,
+				90DA0A4E2B10DBE700C97E85 /* Sabig */,
 			);
 		};
 /* End PBXProject section */
@@ -174,7 +171,6 @@
 				90DA0A5A2B10DBE800C97E85 /* Preview Assets.xcassets in Resources */,
 				22331CDA2B1D9DCA00910264 /* punch.mp3 in Resources */,
 				90DA0A572B10DBE800C97E85 /* Assets.xcassets in Resources */,
-				22CED7CB2B1C6F2200BC71B0 /* Localizable.xcstrings in Resources */,
 				22A5C6352B1D15BC00BCA611 /* gong.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,11 +328,13 @@
 				DEVELOPMENT_TEAM = 4N7H9NTACZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "سابق";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,9 +342,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = l.GameC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -361,11 +361,13 @@
 				DEVELOPMENT_TEAM = 4N7H9NTACZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "سابق";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,16 +375,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = l.GameC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90DA0A4A2B10DBE700C97E85 /* Build configuration list for PBXProject "GameC" */ = {
+		90DA0A4A2B10DBE700C97E85 /* Build configuration list for PBXProject "Sabig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90DA0A5B2B10DBE800C97E85 /* Debug */,
@@ -391,7 +395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90DA0A5D2B10DBE800C97E85 /* Build configuration list for PBXNativeTarget "GameC" */ = {
+		90DA0A5D2B10DBE800C97E85 /* Build configuration list for PBXNativeTarget "Sabig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90DA0A5E2B10DBE800C97E85 /* Debug */,
