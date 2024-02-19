@@ -23,7 +23,7 @@ struct VS: View {
                                 .trim(from: 0 , to: 0.6)
                                 .rotationEffect(.degrees(-180))
                             
-                                .frame(width: 400, height: 500)
+                                .frame(width: 450, height: 500)
                             
                                 .cornerRadius(13)
                                 .foregroundStyle(
@@ -52,11 +52,11 @@ struct VS: View {
                         ZStack{
                             Rectangle()
                                 .trim(from: 0 , to: 0.6)
-                                .frame(width: 400, height: 500)
+                                .frame(width: 450, height: 500)
                                 .cornerRadius(13)
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
-                                .padding(.leading, -100)
+                                .padding(.leading, -150)
                             
                             Text("\(team2Name)")
                                 .foregroundColor(Color.white)
@@ -70,7 +70,7 @@ struct VS: View {
                             Image("ninjasmile2")
                                 .resizable()
                                 .frame(width:200, height: 230)
-                                .offset(x:60,y: 135)
+                                .offset(x:50,y: 135)
                         }
                         
                     }
@@ -93,7 +93,7 @@ struct VS: View {
                                 .font(.system(size: 32, weight: .bold))
                                 .foregroundColor(.white)
                                 .padding(30)
-                        }
+                        } .shadow(color: .black, radius: 5, x: 0, y: 5)
                     }
                         
 //                    NavigationLink{ GameRoom( team1Name: $team1Name, team2Name: $team2Name)}

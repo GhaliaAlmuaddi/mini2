@@ -100,7 +100,7 @@ import SwiftUI
                     //.tint(.black)
                     .padding()
                 }
-                .shadow(radius: 20)
+                .shadow(color: .black, radius: 5, x: 0, y: 5)
                 .padding(30)
               
             }.ignoresSafeArea().padding(-40) //here

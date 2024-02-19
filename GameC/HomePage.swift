@@ -29,88 +29,93 @@ struct HomePage: View {
                 
                 .ignoresSafeArea()
                 
-                HStack{
+                VStack(spacing:60){
                     
                    
-                        Button{ sheetShowing.toggle()
-                            
-                        }
-                    label:{
-                        ZStack{
-                            Rectangle()
-                            .trim(from: 0 , to: 0.6)
-                            .rotationEffect(.degrees(-180))
-                        
-                            .frame(width: 500, height: 800)
-                        
-                            .cornerRadius(13)
-                            
-                                .foregroundStyle(
-                                    LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
-                                .padding(.trailing, -250)
-                            VStack{
-                                Text("وش السالفة؟")
-                                    .foregroundColor(Color.white)
-                                    .multilineTextAlignment(.trailing)
-                                    .font(.system(size: 52))
-                                
-                                    .offset(x: 50, y: 60)
-                                //.rotationEffect(.degrees(5))
-                                Image("ninja?")
-                                
-                                    .resizable()
-                                    .frame(width:270, height: 340
-                                    )
-                                    .offset(x: 10, y:183)
-                                //.rotationEffect(.degrees(5))
-                                
-                                
-                            }
-                            .fullScreenCover(isPresented: $sheetShowing, content:{ GameDescription(sheetShowing: $sheetShowing)})
-                           
-                            
-                        }
-                        
-                   //    .padding()
-                     
-                        
-                    }
                        
                     Button {
                         isActive = true
                     } label: {
                         ZStack {
                             Rectangle()
-                                .trim(from: 0 , to: 0.6)
-                                .frame(width: 500, height: 800)
+                                .trim(from: 0 , to: 0.7)
+                                .frame(width: 1000, height: 500)
                                 .cornerRadius(13)
                                 .foregroundStyle(
                                     LinearGradient(gradient: Gradient(colors: [CustomColor.CustomDyellow, CustomColor.CustomLyellow]), startPoint: .topTrailing, endPoint: .bottomLeading)
                                 )
-                               
-                              
-                            VStack{
+                                .shadow(radius: 30)
+                                .rotationEffect(.degrees(180))
+                                .shadow(color: .black, radius: 5, x: 0, y: 5)
+                                
+                            HStack{
                                 Text("يلا نلعب!")
                                     .foregroundColor(Color.white)
                                     .multilineTextAlignment(.trailing)
                                     .font(.system(size: 52))
-                                    .offset(x: 50, y: 60)
+                                   .offset(x: 400, y: 155)
                                 
                                 
                                 Image("NINJA_SMILE")
                                     .resizable()
-                                    .frame(width:270, height: 340
+                                    .frame(width:350, height: 350
                                     )
-                                    .offset(x: 115.0, y: 185)
-                                // .rotationEffect(.degrees(5))
+                                    .offset(x: -220.0, y: 80)
+                                
                                 
                             }
                             
                         }
-                          
+                        .padding(.trailing, 200)
                     }
-                }
                     
+                    Button{ sheetShowing.toggle()
+                        
+                    }
+                label:{
+                    ZStack{
+                        Rectangle()
+                        .trim(from: 0 , to: 0.7)
+                       
+                    
+                        .frame(width: 1000, height: 500)
+                    
+                        .cornerRadius(13)
+                        
+                            .foregroundStyle(
+                                LinearGradient(gradient: Gradient(colors: [CustomColor2.CustomDpurple, CustomColor2.CustomLpurple]), startPoint: .top, endPoint: .bottomLeading))
+                            .shadow(color: .black, radius: 5, x: 0, y: 5)
+                           
+                        HStack{
+                            Text("وش السالفة؟")
+                                .foregroundColor(Color.white)
+                                .multilineTextAlignment(.trailing)
+                                .font(.system(size: 52))
+                            
+                                .offset(x: 0, y: -170)
+                            
+                            Image("ninja?")
+                            
+                                .resizable()
+                                .frame(width:350, height: 440
+                                )
+                                .offset( y:31)
+                                
+                            //.rotationEffect(.degrees(5))
+                            
+                            
+                        }
+                        .fullScreenCover(isPresented: $sheetShowing, content:{ GameDescription(sheetShowing: $sheetShowing)})
+                       
+                        
+                    }
+                    
+                    .padding(.leading, 200)
+                 
+                    
+                }
+
+                }
                 if isActive {
                     CreatingTeamDialogue(isActive: $isActive, title: "كون فريقك", buttonTitle: "يلا نبدا") {
                         // print("Pass to viewModel")
@@ -120,7 +125,8 @@ struct HomePage: View {
         
                 
                 
-            }}
+            }
+}
         .navigationBarBackButtonHidden(true)
         //.accentColor(.red)
         //.padding(.bottom, -10.0)
