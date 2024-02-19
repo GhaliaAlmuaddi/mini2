@@ -50,7 +50,7 @@ struct HomePage: View {
                                 
                             HStack{
                                 Text("يلا نلعب!")
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(Color.white).bold()
                                     .multilineTextAlignment(.trailing)
                                     .font(.system(size: 52))
                                    .offset(x: 400, y: 155)
