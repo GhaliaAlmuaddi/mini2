@@ -20,7 +20,7 @@ struct Winner: View {
     var body: some View {
         NavigationView{
             ZStack{
-                //Color("CustomDpurple")
+                
                 AngularGradient(
                     gradient: Gradient(colors: [ CustomColor.CustomDpurple,CustomColor.CustomLpurple]), center: .topLeading,
                     startAngle: .zero,
@@ -28,24 +28,21 @@ struct Winner: View {
                     
                 )
                 .ignoresSafeArea()
-                //                            Text("النتائج")
-                //                            .font(.title)
-                //                            .foregroundColor(Color.white)
-                //                            .offset(x:0, y: -500)
+               
                 GroupBox {
                     VStack{
                         
                         if CounterTeamOne > CounterTeamTwo {
                             
                             StrokeText(text: "\(team1Name)", width: 1.5, color: .customLyellow)
-                            //Text("الفريق الاول")
+                            
                             
                                 .font(.system(size: 72))
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
                                 .frame(width: 400.0, height: 200.0).padding()
                             
-                            // .offset(x:0, y: -20)
+                           
                             
                             Text("النتيجة \(CounterTeamOne)")
                                 .foregroundColor(Color.white)
@@ -76,7 +73,7 @@ struct Winner: View {
                                 .background(Color(hue: 0.0, saturation: 0.016, brightness: 0.821, opacity: 0.35))
                             
                                 .cornerRadius(40).padding(.top,-50)
-                            // .offset(x:0, y: -50)
+                            
                             
                         }
                         
@@ -113,10 +110,7 @@ struct Winner: View {
                             .cornerRadius(41)
                             .frame(width: 550, height: 100.0)
                     } .shadow(color: .black, radius: 3, x: 0, y: 3)
-                        //                    .sheet(isPresented: $isButtonTapped) {
-                        //                        // Present the next view/page here
-                        //                        AnotherPageView()
-                        //                    }
+                                         
                     }
                     
                     .frame(width: 433, height: 616)
@@ -127,11 +121,11 @@ struct Winner: View {
                     Image("win1")
                         .resizable()
                         .frame(width:600, height:140)
-                    //.position(CGPoint(x: 400, y: 242))
+                    
                     Text("الفائز")
                         .foregroundColor(Color.white)
                         .fontWeight(.bold).padding(.bottom,20)
-                    // .position(CGPoint(x: 400, y: 229))
+                    
                         .font(.system(size: 46))
                                         Image("star1")
                                             .resizable()
@@ -144,30 +138,19 @@ struct Winner: View {
                                         Image("star1")
                                             .resizable()
                                             .frame(width:60, height:60).padding(.bottom,200).padding(.trailing,200)
-                                           // .position(CGPoint(x: 500, y: 176))
+                                        
                     
                     
                 }.padding(.bottom,600)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-       // .padding()
+       
     }
 }
 
 
-//struct AnotherPageView: View {
-//    var body: some View {
-//        Text("This is another page")
-//            .font(.title)
-//    }
-//}
 
-// CUSTOM COLORS END...
-
-//#Preview {
-//    ContentView()
-//}
 
 
 struct ContentView_Previews2: PreviewProvider {

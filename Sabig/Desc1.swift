@@ -4,8 +4,6 @@
 //
 //  Created by Amal Abughazaleh on 13/05/1445 AH.
 //
-
-
 import SwiftUI
 
 struct Desc1: View {

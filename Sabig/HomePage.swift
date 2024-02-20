@@ -128,10 +128,7 @@ struct HomePage: View {
             }
 }
         .navigationBarBackButtonHidden(true)
-        //.accentColor(.red)
-        //.padding(.bottom, -10.0)
-        
-        
+       
         
         
         

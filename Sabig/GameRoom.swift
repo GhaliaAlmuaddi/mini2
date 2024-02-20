@@ -179,6 +179,7 @@ struct GameRoom: View {
                     .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showGotPoint) {
                         Button("لا",role: .cancel) { }
                         Button("اي",role: .destructive) {
+     
                             sheetShowing.toggle()
                             SoundManger.incstance.playSound(sound: .gong)
                             Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)
@@ -191,21 +192,7 @@ struct GameRoom: View {
                     
                     Spacer()
                     
-//                    Button("دعوة") {
-//                        showCode = true
-//                      //  conn4VM.invite()
-//                        
-//                    }
-//                   .alert("رمز الدعوة:", isPresented: $showCode) {
-//                       Button("نسخ",role: .cancel) { }
-//                   } message: {
-//                        Text("CBC1414")
-////                        
-//                  }
-//                    .foregroundColor(CustomColor.CustomDyellow)
-//                    .font(.system(size: 24))
-//                    .padding(10)
-                    
+
                     
                 }.padding(30)//END OF HSTACK FOR THE BTNS
                 
@@ -222,8 +209,7 @@ struct GameRoom: View {
                             .multilineTextAlignment(.trailing)
                         ZStack(alignment:.leading){
                             ZStack{
-                                //let pct1 = Double(CounterTeamOne)/1
-                                //Text(String(format: "%.0f", self.presnt * 100) + "%")
+                            
                                 Capsule()
                                 .fill(.black.opacity(0.08)).frame(width: 100,height: 22)}
                             let pct1 = Double(CounterTeamOne)/1;
@@ -254,8 +240,7 @@ struct GameRoom: View {
                                 .foregroundColor(.white)
                                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                                 .fontWeight(.semibold)
-                            //.multilineTextAlignment(.trailing)
-                            //.font(.system(family: "Helvetica"))
+                            
                             Capsule()
                                 .fill(.white.opacity(0.08))
                                 .frame(width: 350,height: 60)
@@ -278,7 +263,7 @@ struct GameRoom: View {
                         
                         ZStack(alignment:.leading){
                             ZStack{
-                                //Text(String(format: "%.0f", self.presnt * 100) + "%")
+                              
                                 Capsule()
                                     .fill(.black.opacity(0.08))
                                     .frame(width: 100,height: 22)
@@ -464,8 +449,7 @@ struct GameRoom: View {
                         
                         
                     }.padding(30)
-                    //HSTACK FOR THE BTN COUNTER END ...
-                    
+                   
                     
                     
                     
@@ -474,11 +458,11 @@ struct GameRoom: View {
                     
                     
                     
-            }.ignoresSafeArea()// END OF VSTACK
+            }.ignoresSafeArea()
             
         }
         
-        //.ignoresSafeArea()
+      
           
         .onAppear{
             Current_Q = uniqueShaffled(Array1:  &RequestsAndOrders,UniqueSet1: &UniqueSet)

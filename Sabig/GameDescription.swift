@@ -55,8 +55,7 @@ struct GameDescription: View {
                 .padding()
              
             }
-            //.toolbarBackground(.hidden, for: .navigationBar)
-            //.tabViewStyle(PageTabViewStyle())
+           
             
             
     

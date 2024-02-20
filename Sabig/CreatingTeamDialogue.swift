@@ -12,9 +12,11 @@ import SwiftUI
         @Binding var isActive: Bool
 
         let title: String
-        //let message: String
+    
         @State var team1Name = ""
         @State var team2Name = ""
+        @State var showAlert : Bool = false
+        @State var showNextView: Bool = false
         let buttonTitle: String
         let action: () -> ()
         @State private var offset: CGFloat = 3000
@@ -63,19 +65,28 @@ import SwiftUI
                         //   }
                         .font(.body)
 
-                    NavigationLink{
-                    //action()
-                      VS(team1Name: $team1Name, team2Name: $team2Name)
-                                            
-                    } label: {
+                    Button{
+                       
+                        
+                        if (team1Name.count > 0 && team2Name.count > 0 ) {
+                          hideKeyboard()
+                            showNextView = true
+                            
+                          
+                            
+                        }
+                        
+                        else {
+                           showAlert.toggle()
+                        }
+                    }label: {
                         ZStack {
                            
 
                                 
                             
                             LinearGradient(colors: [ CustomColor.CustomDyellow,CustomColor.CustomLyellow], startPoint:.bottom, endPoint: .top).frame(width: 286, height:71).cornerRadius(41).shadow(color: .black, radius: 3, x: 0, y: 3)
-//                        RoundedRectangle(cornerRadius: 41)
-//                                .foregroundColor(.yellow)
+
 
                             Text(buttonTitle)
                                 .font(.system(size: 22, weight: .bold))
@@ -84,7 +95,9 @@ import SwiftUI
                         }
                         .padding(30)
                     }
-                }.cornerRadius(20)
+                }.cornerRadius(20).alert(isPresented: $showAlert) {
+                    Alert(title: Text("الاسم مطلوب"), message: Text("اسماء الفريقين مطلوبة"), dismissButton: .default(Text("تم")))
+                }
            
                
                 .padding(30)
@@ -103,6 +116,15 @@ import SwiftUI
                 
                 .padding(30)
               
+                
+                
+                if (showNextView == true) {
+                    VS(team1Name: $team1Name, team2Name: $team2Name)
+                    
+                }
+                
+                
+                
             }.ignoresSafeArea().padding(-40) //here
         }
         
@@ -129,6 +151,9 @@ struct CustomColor{
         }
     }
 
-//#Preview {
-//    JoiningDialogue()
-//}
+private func hideKeyboard() {
+     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+     
+ }
+
+
