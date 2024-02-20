@@ -49,6 +49,7 @@ struct GameRoom: View {
     @State  var CounterTeamOne = 0
     @State  var CounterTeamTwo = 0
     @State private var presnt : CGFloat = 003
+    @State private var showBackToPlay = false
     
     @State private var navigationActive: Bool = false
     
@@ -174,8 +175,15 @@ struct GameRoom: View {
             VStack{
                 HStack{
                     Button("إنهاء") {
-                        showGotPoint = true
+                        if CounterTeamOne == CounterTeamTwo {
+                            
+                            showBackToPlay = true
+                        } else {
+                           
+                            showGotPoint = true
+                        }
                     }
+
                     .alert("طفشتوا،تبغون تنهون اللعبة وتشوفون عقاب الخسرانين؟", isPresented: $showGotPoint) {
                         Button("لا",role: .cancel) { }
                         Button("اي",role: .destructive) {
@@ -183,6 +191,14 @@ struct GameRoom: View {
                             sheetShowing.toggle()
                             SoundManger.incstance.playSound(sound: .gong)
                             Winner(CounterTeamOne: $CounterTeamOne, CounterTeamTwo: $CounterTeamTwo, team1Name: $team1Name, team2Name: $team2Name)
+                        }
+                    }
+                    
+                    .alert("متعادلين! كملو دور تاني لإنهاء اللعبة", isPresented: $showBackToPlay) {
+                       
+                        Button("إرجع", role: .cancel) {
+                          
+                            showBackToPlay = false
                         }
                     }
                     .foregroundColor(CustomColor.CustomDyellow)
