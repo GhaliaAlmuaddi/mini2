@@ -194,9 +194,9 @@ struct GameRoom: View {
                         }
                     }
                     
-                    .alert("متعادلين! كملو دور تاني لإنهاء اللعبة", isPresented: $showBackToPlay) {
+                    .alert("متعادلين! تحتاجون تلعبون دورة زيادة لإنهاء اللعبة", isPresented: $showBackToPlay) {
                        
-                        Button("إرجع", role: .cancel) {
+                        Button("تم", role: .cancel) {
                           
                             showBackToPlay = false
                         }
